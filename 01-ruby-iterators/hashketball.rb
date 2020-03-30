@@ -132,9 +132,7 @@ def players
   # players_array = []
   # iterating through game hash and returning a list of all my players
   game_hash.map do |key, value|
-    # players_array << value[:players]
     value[:players]
-
   end.flatten
 
 end
@@ -149,11 +147,9 @@ def find_player(name)
   # players.select do |player|
   #  player[:name] == name
   # end
-
   players.find do |player|
    player[:name] == name
   end
-
 end
 
 
