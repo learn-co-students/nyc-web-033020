@@ -29,7 +29,10 @@ class Owner
     # array of just this owner's cats: [cat1, cat2]
   end
 
-
+  def buy_cat(name)
+    cat = Cat.new(name, self)
+    
+  end
 
 
 
