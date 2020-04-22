@@ -1,0 +1,10 @@
+<h1>Edit Form</h1>
+
+<form action="/animals/<%= @animal.id %>" method='POST'>
+  <input type="hidden" name="_method" value="PATCH">
+  <input type="text" name="animal[name]" placeholder="Enter Name" value="<%= @animal.name%>">
+  <input type="text" name="animal[species]" placeholder="Enter Species" value="<%= @animal.species%>">
+  <input type="number" name="animal[age]" placeholder="Age" value="<%= @animal.age%>">
+
+  <input type="submit" value='Edit Animal'>
+</form>

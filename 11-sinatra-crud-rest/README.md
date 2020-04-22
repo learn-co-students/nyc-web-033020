@@ -14,6 +14,7 @@
 ## Outline
 - Review our app
   - READ
+  - Add 'SHOW' page
   - Add some links
 - Part 1: CREATE
   - Forms
@@ -69,7 +70,7 @@ When we click SUBMIT to submit the form, the browser will send a request to the 
 Once the form is submitted, we need a place in our controller receive the request and do something with the user's data. All the information filled in by the user in our form will be available in the `params` hash as key/value pairs. The keys will match with the `name` attributes on our input fields, and the values will be whatever the user put in before submitting the form.
 
 ```rb
-  post "/movie" do
+  post "/movies" do
     movie = Movie.create(title: params[:title], runtime: params[:runtime])
   end
 ```
@@ -77,7 +78,7 @@ Once the form is submitted, we need a place in our controller receive the reques
 Since ActiveRecord's create method accepts a hash as an argument, and our `params` is a hash, we can also use mass assingment to make our code a little cleaner:
 
 ```rb
-  post "/movie" do
+  post "/movies" do
     movie = Movie.create(params)
   end
 ```
