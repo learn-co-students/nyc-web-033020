@@ -1,0 +1,18 @@
+<h1>Animal Show</h1>
+
+<h3><%= @animal.name %></h3>
+<p><%= @animal.age %></p>
+<p><%= @animal.species %></p>
+
+<p>Aquarium <%= @animal.aquarium.name %></p>
+
+<marquee scrollamount="15">
+  <img class='show-img' src="<%= @animal.img_url %>" alt="animal">
+</marquee>
+
+<form action="/animals/<%= @animal.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete Animal">
+</form>
+
+<a href="/animals">INDEX</a>

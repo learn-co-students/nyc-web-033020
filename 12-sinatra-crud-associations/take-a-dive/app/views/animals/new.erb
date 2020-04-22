@@ -1,0 +1,17 @@
+<h1>New Form</h1>
+
+<form action="/animals" method='POST'>
+  <input type="text" name="name" placeholder="Enter Name">
+  <input type="text" name="species" placeholder="Enter Species">
+  <input type="number" name="age" placeholder="Age">
+
+  <select name="aquarium_id">
+    <% @aquariums.all.each do |aquarium| %>
+      <option value="<%= aquarium.id %>"><%= aquarium.name%></option>
+    <% end %>
+  </select>
+
+  <input type="submit" value='Create Animal'>
+</form>
+
+

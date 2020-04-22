@@ -1,0 +1,10 @@
+<h1>All Animals (Index Page)</h1>
+
+<div class="index-container">
+  <% @animals.each do |animal| %>
+    <div class="index-tile">
+      <p><a href="/animals/<%= animal.id %>"><%= animal.name %></a></p>
+      <img class='index-img' src="<%= animal.img_url %>" alt="animal">
+    </div>
+  <% end %>
+</div>

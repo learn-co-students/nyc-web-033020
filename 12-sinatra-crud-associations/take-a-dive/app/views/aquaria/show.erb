@@ -1,0 +1,7 @@
+<h1> <%= @aquarium.name %> </h1>
+<h4> <%= @aquarium.city %> </h4>
+
+
+<% @aquarium.animals.each do |animal| %>
+  <p><%= animal.name %></p>
+<% end %>
