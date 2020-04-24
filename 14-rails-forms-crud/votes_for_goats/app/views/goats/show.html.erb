@@ -1,0 +1,11 @@
+<h1>Show Page</h1>
+
+<h2><%= @goat.name %></h2>
+<p><%= @goat.age %></p>
+<p><%= @goat.occupation %></p>
+<p><%= @goat.living ? "ALIVE!!" : "History Remembers" %></p>
+
+<%= link_to "INDEX PAGE", goats_path %>
+
+<%= link_to "Edit this GOAT", edit_goat_path(@goat.id) %>
+<%# button_to "Edit this GOAT", edit_goat_path(@goat.id), method: :get %>

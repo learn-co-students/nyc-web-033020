@@ -1,0 +1,5 @@
+<h1>Goats Index</h1>
+
+<% @goats.each do |goat| %>
+  <p><%= link_to goat.name, goat_path(goat.id) %></p>
+<% end %>
