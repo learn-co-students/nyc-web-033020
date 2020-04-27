@@ -1,0 +1,16 @@
+<div class='container'>
+  <h1>Goats Index</h1>
+
+  <div class="index-container">
+
+    <% @goats.each do |goat| %>
+      <div class='index-tile'>
+        <h3><%= link_to goat.name, goat_path(goat.id) %></h3>
+        <p><%= goat.occupation %></p>
+         <img class='index-img' src="<%= goat.img_url %>" alt="<%goat.name%>">
+      </div>
+    <% end %>
+    
+  </div>
+
+</div>

@@ -1,0 +1,19 @@
+<div class='container'>
+  <h1>Show Page</h1>
+
+  <h2><%= @goat.name %></h2>
+  <p>Age: <%= @goat.age %></p>
+  <p>Occupation: <%= @goat.occupation %></p>
+  <p>Life Status: <%= @goat.living ? "ALIVE!!" : "History Remembers" %></p>
+
+  <marquee direction='right' scrollamount='15'>
+    <img class='show-img' src="<%= @goat.img_url %>" alt="<%@goat.name%>">
+  </marquee>
+
+  <hr>
+  <%= link_to "INDEX PAGE", goats_path %>
+  <br>
+  <%= link_to "Edit this GOAT", edit_goat_path(@goat.id) %>
+  <%# button_to "Edit this GOAT", edit_goat_path(@goat.id), method: :get %>
+
+</div>
