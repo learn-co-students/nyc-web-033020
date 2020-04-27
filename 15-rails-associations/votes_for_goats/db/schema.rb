@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_24_174851) do
+ActiveRecord::Schema.define(version: 2020_04_27_192054) do
 
   create_table "goats", force: :cascade do |t|
     t.string "name"
@@ -22,4 +22,23 @@ ActiveRecord::Schema.define(version: 2020_04_24_174851) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "img_url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "goat_id", null: false
+    t.string "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["goat_id"], name: "index_votes_on_goat_id"
+    t.index ["user_id"], name: "index_votes_on_user_id"
+  end
+
+  add_foreign_key "votes", "goats"
+  add_foreign_key "votes", "users"
 end

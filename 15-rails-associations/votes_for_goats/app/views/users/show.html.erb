@@ -1,0 +1,19 @@
+<div class='container'>
+  <h1>Show Page</h1>
+
+  <h2><%= @user.name %></h2>
+
+  <marquee direction='right' scrollamount='15'>
+    <img class='show-img' src="<%= @user.img_url %>" alt="<%@user.name%>">
+  </marquee>
+
+
+  <hr>
+  <%= link_to "INDEX PAGE", users_path %>
+  <hr>
+  <% @user.votes.each do |vote| %>
+    <h4><%= vote.goat.name %></h4> 
+    <p><%= vote.content %></p>
+    <hr>
+  <% end %>
+</div>

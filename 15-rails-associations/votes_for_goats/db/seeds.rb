@@ -6,7 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Goat.destroy_all
-# User.destroy_all
+User.destroy_all
+Vote.destroy_all
 
 # puts ".... Generating Goats"
 # 20.times do 
@@ -32,34 +33,39 @@ goats.each do |goat|
   Goat.create(goat)
 end 
 
-# users = [
-#   {name: 'Coralfussman', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U01083YN6CA-07e236f1fe28-512'},
-#   {name: 'Brandon Yoon', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010ARCG14H-fcfdf6775708-512'},
-#   {name: 'Daniel Kersten', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010LT11AM6-8dc58050a731-512'},
-#   {name: 'Edgar Rivera', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UTV12MJBG-c6fb5b39ab15-512'},
-#   {name: 'Elias Taveras', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010ZSA826A-ffba90f92886-512'},
-#   {name: 'Elizabeth Karen', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010LTN1B61-d45851c6de5d-512'},
-#   {name: 'Garen Sahagian', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010ARCHG3T-fa38f2a2c267-512'},
-#   {name: 'Ian Grubb', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UKLTXS2LU-93c15b2245eb-512'},
-#   {name: 'John Zhang', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UTSQX1MT7-2ce9858771a8-512'},
-#   {name: 'Jordan Melidor', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010LTN2013-f78acb3da6bd-512'},
-#   {name: 'Kat Maldon', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010S0FNPB6-792446a6ac06-512'},
-#   {name: 'Luis', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010LT13124-18d6e024475f-512'},
-#   {name: 'Maharaj Syed', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UTV12RR62-cdbdc4226119-512'},
-#   {name: 'Matthew Masiello', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UFLH3KMEV-361ad28cf909-512'},
-#   {name: 'Melissa Wise', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UUQ1DMAHH-f29558040e6d-512'},
-#   {name: 'Michelle Frattaroli', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U01083YQGUA-25c685fee626-512'},
-#   {name: 'Michael Jiang', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010KJG9GGY-63aa8f4f9b3b-512'},
-#   {name: 'Ramon Echeverria', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010MQQRC0N-f7e942518a93-512'},
-#   {name: 'Shobhit Ratan', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UTGL2F8TB-0c1149111a22-512'},
-#   {name: 'Stephen Cases', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010LT13T5E-6e3271d23aa4-512'},
-#   {name: 'Tachawn Williams', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U7PSME4DA-8b811931b3d9-512'},
-#   {name: 'Urgen Sherpa', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UV11S4QJG-473d4b6d3d08-512'},
-#   {name: 'William Lin', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UV1FPP00M-9c56ba191861-512'},
-#   {name: 'Yoichi Nagano', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U0106QTV84A-8c1be22e5237-512'}
-# ]
+users = [
+  {name: 'Coralfussman', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U01083YN6CA-07e236f1fe28-512'},
+  {name: 'Brandon Yoon', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010ARCG14H-fcfdf6775708-512'},
+  {name: 'Daniel Kersten', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010LT11AM6-8dc58050a731-512'},
+  {name: 'Edgar Rivera', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UTV12MJBG-c6fb5b39ab15-512'},
+  {name: 'Elias Taveras', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010ZSA826A-ffba90f92886-512'},
+  {name: 'Elizabeth Karen', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010LTN1B61-d45851c6de5d-512'},
+  {name: 'Garen Sahagian', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010ARCHG3T-fa38f2a2c267-512'},
+  {name: 'Ian Grubb', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UKLTXS2LU-93c15b2245eb-512'},
+  {name: 'John Zhang', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UTSQX1MT7-2ce9858771a8-512'},
+  {name: 'Jordan Melidor', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010LTN2013-f78acb3da6bd-512'},
+  {name: 'Kat Maldon', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010S0FNPB6-792446a6ac06-512'},
+  {name: 'Luis', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010LT13124-18d6e024475f-512'},
+  {name: 'Maharaj Syed', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UTV12RR62-cdbdc4226119-512'},
+  {name: 'Matthew Masiello', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UFLH3KMEV-361ad28cf909-512'},
+  {name: 'Melissa Wise', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UUQ1DMAHH-f29558040e6d-512'},
+  {name: 'Michelle Frattaroli', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U01083YQGUA-25c685fee626-512'},
+  {name: 'Michael Jiang', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010KJG9GGY-63aa8f4f9b3b-512'},
+  {name: 'Ramon Echeverria', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010MQQRC0N-f7e942518a93-512'},
+  {name: 'Shobhit Ratan', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UTGL2F8TB-0c1149111a22-512'},
+  {name: 'Stephen Cases', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U010LT13T5E-6e3271d23aa4-512'},
+  {name: 'Tachawn Williams', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U7PSME4DA-8b811931b3d9-512'},
+  {name: 'Urgen Sherpa', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UV11S4QJG-473d4b6d3d08-512'},
+  {name: 'William Lin', img_url: 'https://ca.slack-edge.com/T02MD9XTF-UV1FPP00M-9c56ba191861-512'},
+  {name: 'Yoichi Nagano', img_url: 'https://ca.slack-edge.com/T02MD9XTF-U0106QTV84A-8c1be22e5237-512'}
+]
 
-# puts "...Creating Users"
-# users.each do |user|
-#   User.create(user)
-# end 
+puts "...Creating Users"
+users.each do |user|
+  User.create(user)
+end 
+
+
+100.times do 
+  Vote.create(user_id: User.all.sample.id, goat_id: Goat.all.sample.id, content: Faker::Hipster.sentence(word_count: 5))
+end 

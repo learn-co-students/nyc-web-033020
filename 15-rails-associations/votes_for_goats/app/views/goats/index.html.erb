@@ -8,6 +8,7 @@
         <h3><%= link_to goat.name, goat_path(goat.id) %></h3>
         <p><%= goat.occupation %></p>
          <img class='index-img' src="<%= goat.img_url %>" alt="<%goat.name%>">
+         <%= button_to "DELET", goat_path(goat), method: :delete %>
       </div>
     <% end %>
     

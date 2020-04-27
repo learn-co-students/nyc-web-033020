@@ -1,16 +1,6 @@
 <div class="container">
   <h1>Edit GOAT</h1>
 
-  <%= form_for @goat do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <%= render 'form' %>
 
-    <%= f.label :age %>
-    <%= f.number_field :age %>
-
-    <%= f.label :occupation %>
-    <%= f.text_field :occupation %>
-    
-    <%= f.submit %>
-  <% end %>
 </div>

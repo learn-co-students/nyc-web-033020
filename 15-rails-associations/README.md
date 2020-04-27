@@ -8,10 +8,10 @@
 - Handle deleting an instance of a model that has other records associated using `dependent: :destroy`
 
 ## Outline
-- [] Finish CRUD (DELETE)
-- [] Clean Up Controller && Views
-- [ ] Add an additional model to our domain
-  - [ ] Create relationship using ActiveRecord
+- [X] Finish CRUD (DELETE)
+- [X] Clean Up Controller && Views
+- [X] Add an additional model to our domain
+  - [X] Create relationship using ActiveRecord
   - [ ] Use information from the association in our views
   - [ ] Make a create form for the new model with a dropdown
   - [ ] Update our delete method from the first model
