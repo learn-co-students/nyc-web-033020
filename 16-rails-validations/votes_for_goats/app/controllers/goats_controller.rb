@@ -13,13 +13,22 @@ class GoatsController < ApplicationController
 
   def new 
     @goat = Goat.new
+    
     # render :new
   end 
 
   def create 
-    @goat = Goat.create(goat_params)
-    
-    redirect_to goat_path(@goat)
+    @goat = Goat.new(goat_params)
+    # @goat = Goat.create(goat_params)
+    # if @goat.valid?
+    if @goat.save 
+      redirect_to goat_path(@goat)
+    else
+      #  get error messages
+      flash[:errors] = @goat.errors.full_messages # returns an array
+      # display the new form
+      redirect_to new_goat_path
+    end 
     # redirect_to goat
   end 
 

@@ -4,7 +4,7 @@
     <%= f.text_field :content %>
 
     <%= f.label :user_id %>
-    <%= f.collection_select :user_id, @users :id, :name  %>
+    <%= f.collection_select :user_id, @users, :id, :name  %>
 
     <%= f.label :goat_id %>
     <%= f.collection_select :goat_id, @goats, :id, :name %>

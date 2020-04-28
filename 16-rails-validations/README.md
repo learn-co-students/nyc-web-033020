@@ -16,14 +16,12 @@ In other words, how do we protect our database from the typical user:
 
 
 ## Outline
-- [x] Discuss client vs server side validations
+- [] Discuss client vs server side validations
 - [] Add validations and review ActiveRecord documentation
 - [] Add custom validations
 - [] Use validations in our controller
 - [] Render validation error messages
-- [] *if there's time* Review strong params
-- [x] *bonus* Refactor controller using before_action
-- [x] *bonus* Refactor views using partials
+
 
 
 

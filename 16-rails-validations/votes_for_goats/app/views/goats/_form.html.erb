@@ -1,3 +1,9 @@
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error|%>
+    <p><%= error %></p>
+  <% end%>
+<% end %>
+
  <%= form_for @goat do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
