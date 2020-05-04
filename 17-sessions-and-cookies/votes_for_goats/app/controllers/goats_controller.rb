@@ -7,6 +7,18 @@ class GoatsController < ApplicationController
   end
 
   def show 
+    session[:page_counter] ||= 3
+    session[:page_counter] = session[:page_counter].to_i - 1
+
+    # cookies[:page_counter] ||= 3
+    # cookies[:page_counter] = cookies[:page_counter].to_i - 1
+
+    # if cookies[:page_counter]
+    #   cookies[:page_counter] = cookies[:page_counter].to_i - 1
+    # else 
+    #   cookies[:page_counter] = 3
+    # end 
+
     # @goat = Goat.find(params[:id])
     # render :show
   end 
