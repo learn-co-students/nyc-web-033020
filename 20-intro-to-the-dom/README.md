@@ -2,8 +2,8 @@
 
 ## Three things that JS allows us to do:
 
-1. Account for user interaction
-2. Interact with the web page (DOM) *<= this lecture*
+1. Interact with the web page (DOM) *<= this lecture*
+2. Account for user interaction
 3. Run requests
 
 ## SWBATs
@@ -78,20 +78,49 @@
 - `document.getElementById`
   - get the div with the id "movie-container"
 
+```javascript
+let container = document.getElementById('movie-container')
+```
+
 - `node.getElementsByTagName`
   - get the Matrix li element
 
+  - returns the first (only) element on the document that has that id
+
+```javascript
+let el = document.getElementsByTagName('li')
+el[1]
+```
 
 - `node.getElementsByClassName`
   - get all the li elements with the class "movie"
 
+  - returns a collection of elements that match the class name
+
+```javascript
+let movies = document.getElementsByClassName('movie')
+```
 
 - `node.querySelector`
   - get the up-vote button from within the matrix li
 
+  - returns the first element that matches the CSS Selector query
+
+```javascript
+let matrixLi = document.getElementsByTagName('li')[1]
+let button = matrixLi.querySelector('.up-vote')
+```
   
 - `node.querySelectorAll`
   - get the ul with the id of "movie-list"
+  
+  - returns a collection of nodes that match the CSS Selector query
+  
+```javascript
+const el = document.querySelectorAll('#movie-list')[0] // search by id
+const ul = document.querySelectorAll('ul')[0] // search by tag name
+const upVotes = ul.querySelectorAll('.up-vote') // scope query to node, not just the document
+```
 
   - We can also combine selectors for more specificity:
     - We need a space between `#parent .child`
@@ -103,17 +132,26 @@
 #### UPDATE:
 - replace the welcome image with a different picture
 
+√1. get the image from the DOM
+√2. modify the `src` property of the image object
+
+- when we get something from the DOM using one of our query methods it is an object, we can get or set the properties of that object using dot notation
 
 ```javascript
-
+let welcomeImage = document.getElementById('welcome-image')
+welcomeImage.src = "https://i.ytimg.com/vi/qYKrqd9VacY/maxresdefault.jpg"
 ```
 ---
 
 #### DELETE:
 - remove the Jaws movie
 
-```javascript
+√1. get the jaws movie li from the DOM
+√2. remove the li
 
+```javascript
+let jaws = document.querySelector('li:first-child')
+jaws.remove()
 ```
 
 ---
