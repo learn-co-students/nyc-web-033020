@@ -1,5 +1,4 @@
-console.log("Delegating means getting someone to do your work for you! ¯\\_(ツ)_/¯")
-
+console.log("Quit trying to make fetch happen.")
 
 document.addEventListener("DOMContentLoaded", function(event){
 
@@ -22,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(event){
       title: 'Top Gun',
       imageUrl: 'https://m.media-amazon.com/images/M/MV5BZjQxYTA3ODItNzgxMy00N2Y2LWJlZGMtMTRlM2JkZjI1ZDhhXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_.jpg',
       year: 1986,
-      genre: 'Action',
+      genre: 'Adventure',
       score: 0  
     },
     { 
@@ -36,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function(event){
       title: 'Parasite',
       imageUrl: 'https://mymodernmet.com/wp/wp-content/uploads/2020/02/parasite-film-tribute-1.jpg',
       year: 2019,
-      genre: 'Thriller',
+      genre: 'Horror',
       score: 0  
     },
     {
@@ -61,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function(event){
       imageUrl: "https://resizing.flixster.com/h8e7W7cVaQhuLdSvABDkJk6r5sc=/206x305/v1.bTsxMTE2NjE5OTtqOzE4MzU0OzEyMDA7ODAwOzEyMDA"
     },
   ]
-
   const ul = document.getElementById("movie-list")
 
   function createMovieLi(movieObj){
@@ -82,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function(event){
   }
 
   function renderMovies(movies){
+    ul.innerHTML = ''
     movies.forEach(function(movie){
       const movieLi = createMovieLi(movie)
       ul.append(movieLi)
@@ -163,5 +162,64 @@ document.addEventListener("DOMContentLoaded", function(event){
 
     }
   })
+
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let genreDropdown = document.querySelector('#genre-select')
+
+// genreDropdown.addEventListener('change', function(e){
+//   let genre = e.target.value
+
+//   if(genre === "All"){
+//     renderMovies(movies)
+//   } else {
+//     let selectedMovies = movies.filter(function(movie){
+//       return movie.genre === genre
+//     })
+
+//     renderMovies(selectedMovies)
+//   }
+// })
