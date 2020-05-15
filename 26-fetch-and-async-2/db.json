@@ -49,14 +49,6 @@
       "score": 0
     },
     {
-      "id": 7,
-      "title": "The Omen",
-      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81DmnY-bwvL._AC_SL1500_.jpg",
-      "year": 1972,
-      "genre": "Horror",
-      "score": 18
-    },
-    {
       "title": "Tron",
       "year": "2980",
       "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/41npElxA48L._AC_.jpg",
@@ -65,20 +57,36 @@
       "id": 8
     },
     {
-      "title": "Warlock",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/a2/Warlocksands.jpg",
-      "score": 0,
-      "year": "1990",
-      "genre": "Horror",
-      "id": 10
-    },
-    {
       "title": "What About Bob?",
       "imageUrl": "https://www.movieartarena.com/imgs/wab.jpg",
       "score": 0,
       "year": 1991,
       "genre": "Comedy",
       "id": 11
+    },
+    {
+      "title": "Working Girl",
+      "year": "1987",
+      "genre": "Drama",
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/51X9TJrRBCL._AC_.jpg",
+      "score": 99,
+      "id": 13
+    },
+    {
+      "year": "1979",
+      "title": "Alien",
+      "genre": "Horror",
+      "imageUrl": "https://i.etsystatic.com/14461980/r/il/28c6d5/1417485862/il_570xN.1417485862_le2x.jpg",
+      "score": 0,
+      "id": 15
+    },
+    {
+      "year": "1986",
+      "title": "Predator",
+      "genre": "Horror",
+      "imageUrl": "https://movieposters2.com/images/1566923-b.jpg",
+      "score": 0,
+      "id": 16
     }
   ]
 }

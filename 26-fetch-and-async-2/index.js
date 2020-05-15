@@ -1,70 +1,20 @@
-console.log("Quit trying to make fetch happen.")
+console.log("Quit trying to make fetch happen. Again.")
 
 document.addEventListener("DOMContentLoaded", function(event){
 
-  const movies = [
-    {
-      title: 'The Goonies',
-      imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/515DYf99zfL.jpg',
-      year: 1985,
-      genre: 'Adventure',
-      score: 100
-    },
-    { 
-      title: 'Free Willy',
-      imageUrl: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/Free_willy.jpg/220px-Free_willy.jpg',
-      year: 1993,
-      genre: 'Family',
-      score: 0  
-    },
-    { 
-      title: 'Top Gun',
-      imageUrl: 'https://m.media-amazon.com/images/M/MV5BZjQxYTA3ODItNzgxMy00N2Y2LWJlZGMtMTRlM2JkZjI1ZDhhXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_.jpg',
-      year: 1986,
-      genre: 'Adventure',
-      score: 0  
-    },
-    { 
-      title: 'Mean Girls',
-      imageUrl: 'https://img01.mgo-images.com/image/thumbnail?id=1MV270609a1c6c89af5538a6d63cea71ed4&ql=70&sizes=310x465',
-      year: 2004,
-      genre: 'Comedy',
-      score: 0  
-    },
-    { 
-      title: 'Parasite',
-      imageUrl: 'https://mymodernmet.com/wp/wp-content/uploads/2020/02/parasite-film-tribute-1.jpg',
-      year: 2019,
-      genre: 'Horror',
-      score: 0  
-    },
-    {
-      title: "What About Bob?",
-      year: 1991,
-      genre: 'Comedy',
-      score: 0,
-      imageUrl: "https://www.movieartarena.com/imgs/wab.jpg"
-    },
-    {
-      title: "The Matrix",
-      year: 1999,
-      genre: 'Science Fiction',
-      score: 0,
-      imageUrl: "https://imgc.allpostersimages.com/img/print/u-g-F4S5W20.jpg?w=550&h=550&p=0"
-    },
-    {
-      title: "Jaws",
-      year: 1984,
-      genre: 'Horror',
-      score: 0,
-      imageUrl: "https://resizing.flixster.com/h8e7W7cVaQhuLdSvABDkJk6r5sc=/206x305/v1.bTsxMTE2NjE5OTtqOzE4MzU0OzEyMDA7ODAwOzEyMDA"
-    },
-  ]
   const ul = document.getElementById("movie-list")
+  const url = "http://localhost:3000/movies"
+  const headers = {
+    "content-type": "application/json",
+    "accept": "applicatoin/json"
+}
 
   function createMovieLi(movieObj){
     let li = document.createElement("li")
     li.className = "movie card"
+    li.dataset.beef = 'cow'
+    li.dataset.id = movieObj.id
+
     li.innerHTML = `
       <h3>${movieObj.title}</h3>
       <img alt="" src="${movieObj.imageUrl}" />
@@ -72,14 +22,14 @@ document.addEventListener("DOMContentLoaded", function(event){
       <h4>Genre: ${movieObj.genre}</h4>
       <h4>Score: <span>${movieObj.score}</span> </h4>
       <button class="up-vote">Up Vote</button>
-      <button>Down Vote</button>
+      <button data-purpose="down-vote">Down Vote</button>
       <button class="delete">&times;</button>
     `
 
     return li
   }
 
-  function renderMovies(movies){
+  const renderMovies = movies => {
     ul.innerHTML = ''
     movies.forEach(function(movie){
       const movieLi = createMovieLi(movie)
@@ -111,10 +61,7 @@ document.addEventListener("DOMContentLoaded", function(event){
     return form
   }
 
-  renderMovies(movies)
-
   document.addEventListener("submit", function(e){
-    console.log(e.target.name)
     e.preventDefault()
     const form = e.target
     
@@ -131,10 +78,18 @@ document.addEventListener("DOMContentLoaded", function(event){
       imageUrl: imageUrl, 
       score: score
     }
-
+    
     const movieLi = createMovieLi(movie)
     ul.prepend(movieLi)
 
+    fetch(url,{  
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(movie)
+    })
+    .then(response => response.json())
+    .then(console.log)
+    
     form.reset()
   })
   
@@ -147,8 +102,17 @@ document.addEventListener("DOMContentLoaded", function(event){
       span.textContent = newScore
 
     } else if(e.target.className === 'delete'){
-      console.log('delete')
-      e.target.parentElement.remove()
+      const id = e.target.parentNode.dataset.id
+      console.log(id)
+
+      fetch(`${url}/${id}`, {
+        method: "DELETE",
+        headers: headers
+      })
+      .then(response => {
+        e.target.parentElement.remove()
+      })
+
 
     } else if(e.target.id === 'show-form'){
       e.target.textContent = "Hide Form"
@@ -163,17 +127,34 @@ document.addEventListener("DOMContentLoaded", function(event){
     }
   })
 
+  const getMovies = () => {
+    fetch(url)
+    .then(response => response.json())
+    .then(movies => {
+      renderMovies(movies)
+    })
+  }
+
+  getMovies()
+  // renderMovies(movies)
 })
 
 
 
 
 
+// GET THE MOVIES
+// √do a fetch request to get all the movies
+// √parse that response
+// √render those movies on to the DOM
 
+// CREATE A MOVIE - optimistic
+// √modify the submit listener to do a post request
+// √add the movie to the DOM before hearing back from the DB
 
-
-
-
+// DELETE A MOVIE - pessimistic
+// √modify the delete click listener to do a delete request
+// √remove the movie from the DOM after we hear back from the DB
 
 
 
