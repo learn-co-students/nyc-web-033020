@@ -3,11 +3,12 @@ console.log("Rails. Yasss. 🚂🙌🏻")
 document.addEventListener("DOMContentLoaded", function(event){
 
   const ul = document.getElementById("movie-list")
-  const url = "http://localhost:3000/movies"
+  const select = document.querySelector('select')
+  const url = "http://localhost:3000/api/v1/movies"
   const headers = {
     "content-type": "application/json",
-    "accept": "applicatoin/json"
-}
+    "accept": "application/json"
+  }
 
   function createMovieLi(movieObj){
     let li = document.createElement("li")
@@ -29,10 +30,21 @@ document.addEventListener("DOMContentLoaded", function(event){
     return li
   }
 
+  const createMovieOption = movie => {
+    const option = document.createElement('option')
+    option.textContent = movie.title
+    option.value = movie.id
+
+    return option
+  }
+
   const renderMovies = movies => {
-    ul.innerHTML = ''
+    const movieSelect = document.querySelector('#movie-select')
+
     movies.forEach(function(movie){
       const movieLi = createMovieLi(movie)
+      const movieOption = createMovieOption(movie)
+      movieSelect.append(movieOption)
       ul.append(movieLi)
     })
   }
@@ -61,6 +73,28 @@ document.addEventListener("DOMContentLoaded", function(event){
     return form
   }
 
+  const renderMovieDetails = movie => {
+    document.querySelector('#movie-title').textContent = `${movie.title} is the BEST movie!! 💯`
+    document.querySelector('#movie-poster').src = movie.imageUrl
+  }
+
+  const clearMovieDetails = () => {
+    document.querySelector('#movie-title').textContent = ''
+    document.querySelector('#movie-poster').src = ''
+  }
+  
+  select.addEventListener('change', e => {
+    const id = e.target.value
+    
+    if(id === 'none'){
+      clearMovieDetails()
+    } else {
+      fetch(`${url}/${id}`)
+      .then(response => response.json())
+      .then(renderMovieDetails)
+    }
+  })
+  
   document.addEventListener("submit", function(e){
     e.preventDefault()
     const form = e.target
@@ -101,6 +135,16 @@ document.addEventListener("DOMContentLoaded", function(event){
       const newScore = currentScore + 1
       span.textContent = newScore
 
+      const id = li.dataset.id
+
+      fetch(`${url}/${id}`, {
+        method: "PATCH",
+        headers: headers,
+        body: JSON.stringify({ score: newScore })
+      })
+      .then(response => response.json())
+      .then(console.log)
+
     } else if(e.target.className === 'delete'){
       const id = e.target.parentNode.dataset.id
       console.log(id)
@@ -111,8 +155,8 @@ document.addEventListener("DOMContentLoaded", function(event){
       })
       .then(response => {
         e.target.parentElement.remove()
+        // remove movie from select element
       })
-
 
     } else if(e.target.id === 'show-form'){
       e.target.textContent = "Hide Form"
@@ -127,8 +171,6 @@ document.addEventListener("DOMContentLoaded", function(event){
     }
   })
 
-  
-
   const getMovies = () => {
     fetch(url)
     .then(response => response.json())
@@ -141,3 +183,8 @@ document.addEventListener("DOMContentLoaded", function(event){
 })
 
 
+// √populate the select element with movie titles
+// √add change listener to select element
+// √on change, fetch to the show route for that movie
+// √render that movies details in the correct part of the DOM
+// remove movie from dropdown on delete

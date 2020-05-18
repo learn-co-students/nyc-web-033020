@@ -11,4 +11,17 @@
 <script>
   // as a user, when I select a color from the dropdown, the background
   // color of the whole page should change to that color
+
+  // √get the select element from the DOM
+  // √add a listener to it - but for what??
+  // √when an option is selected, get the color from it somehow
+  // √set the background color to that color
+
+  const select = document.querySelector('select')
+
+  select.addEventListener('change', e => {
+    const color = e.target.value
+    document.body.style.backgroundColor = color
+  })
+
 </script>
