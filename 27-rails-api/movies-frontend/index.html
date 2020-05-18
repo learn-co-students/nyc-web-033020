@@ -13,15 +13,30 @@
     <img id="welcome-image" alt="" src="https://media.giphy.com/media/UDjF1zMreMld6/giphy.gif" />
     <br />
 
-    <div class="new-movie-container card">
+    <div class="new-movie-container">
         <h2>🎥 Add a New Movie 🎬</h2>
         <button id="show-form">Show Form</button>
         <br>
     </div>
 
     <div id="movie-container">
-        <ul id="movie-list">
-        </ul>
+        <div class="left">
+            <ul id="movie-list">
+            </ul>
+        </div>
+        <div class="right">
+            <div class="movie-sort card">
+                <label for="">Filter by genre: </label>
+                <select id="genre-select">
+                    <option value="none" selected  >Select A Movie...</option>
+        
+                </select>
+            </div>
+            <div class="movie-details">
+                <h1 id="movie-title"></h1>
+                <img src="" alt="">
+            </div>
+        </div>
     </div>
 
 </body>
@@ -86,14 +101,3 @@
 
 
 
-    <!-- <div class="movie-sort card">
-        <label for="">Filter by genre: </label>
-        <select id="genre-select">
-            <option value="All" selected  >All Genres</option>
-            <option value="Adventure">Adventure</option>
-            <option value="Comedy">Comedy</option>
-            <option value="Family">Family</option>
-            <option value="Horror">Horror</option>
-            <option value="Science Fiction">Science Fiction</option>
-        </select>
-    </div> -->

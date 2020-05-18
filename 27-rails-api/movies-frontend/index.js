@@ -1,4 +1,4 @@
-console.log("Quit trying to make fetch happen. Again.")
+console.log("Rails. Yasss. 🚂🙌🏻")
 
 document.addEventListener("DOMContentLoaded", function(event){
 
@@ -127,6 +127,8 @@ document.addEventListener("DOMContentLoaded", function(event){
     }
   })
 
+  
+
   const getMovies = () => {
     fetch(url)
     .then(response => response.json())
@@ -136,25 +138,8 @@ document.addEventListener("DOMContentLoaded", function(event){
   }
 
   getMovies()
-  // renderMovies(movies)
 })
 
-
-
-
-
-// GET THE MOVIES
-// √do a fetch request to get all the movies
-// √parse that response
-// √render those movies on to the DOM
-
-// CREATE A MOVIE - optimistic
-// √modify the submit listener to do a post request
-// √add the movie to the DOM before hearing back from the DB
-
-// DELETE A MOVIE - pessimistic
-// √modify the delete click listener to do a delete request
-// √remove the movie from the DOM after we hear back from the DB
 
 
 
