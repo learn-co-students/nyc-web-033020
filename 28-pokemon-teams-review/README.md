@@ -22,7 +22,8 @@ A Pokemon Card can be placed within the `<main>` tags.
 
 ### Pokemon Trainer Card
 ```
-<div class="card" data-id="1"><p>Prince</p>
+<div class="card" data-id="1">
+  <p>Prince</p>
   <button data-trainer-id="1">Add Pokemon</button>
   <ul>
     <li>Jacey (Kakuna) <button class="release" data-pokemon-id="140">Release</button></li>
