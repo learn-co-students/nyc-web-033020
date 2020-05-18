@@ -157,8 +157,6 @@ document.addEventListener("DOMContentLoaded", function(event){
       .then(response => response.json())
       .then(renderMovieDetails)
     }
-
-
   })
 
   const getMovies = () => {
