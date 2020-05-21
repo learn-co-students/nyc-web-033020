@@ -58,6 +58,8 @@ say_name(name) # what will happen 🤔
 ```
 
 ---
+### Lexical Scope
+
 - Variable Scope in JavaScript: Lexical scope means that scope is defined by author-time decisions of where functions are declared. [From You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
 
 - From the [MDN Article on Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures): "The word 'lexical' refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that variable is available. Nested functions have access to variables declared in their outer scope."
@@ -67,7 +69,7 @@ say_name(name) # what will happen 🤔
 - Each scope is like its own 'bucket' in JavaScript––our variables live within a space and can reach out to an outer scope. Think of scope as moving in one direction––functions can reach "up" to variables in their outer scope, but not the other way around:
 
 ```javascript
-var name = 'jon'
+let name = 'jon'
 
 function sayName() {
   console.log(name)
@@ -80,7 +82,7 @@ sayName() // 'jon'
 
 ```javascript
 function sayName() {
-  var name = 'garry'
+  let name = 'garry'
   console.log(name)
 }
 
@@ -92,10 +94,10 @@ console.log(name) // name is not defined; name is scoped within the sayName fn
 - Furthermore, JavaScript will look at (resolve) the most local scope before looking up:
 
 ```javascript
-var name = 'andrew' //global var
+let name = 'andrew' //global var
 
 function sayName() {
-  var name = 'garry' // local to sayName
+  let name = 'garry' // local to sayName
   console.log(name)
 }
 
@@ -112,14 +114,14 @@ sayName() // 'garry'
   - `Global`: a variable declared in the global scope; outside a function, outside a block, outside an object. These variables are _globally accessible_ meaning they can be read _anywhere_ in your code.
 
 ```javascript
-var name = 'my global name'
+let name = 'my global name'
 ```
 
 - `Function` scope: variables are confined to the functions in which they were declared. These variables are _not accessible_ in the global scope. They can only be accessed within the function or any scope that is 'lower' on the scope chain, or more local (more on that later)
 
 ```javascript
 function fnScope() {
-  var name = 'a local name'
+  let name = 'a local name'
 }
 ```
 
