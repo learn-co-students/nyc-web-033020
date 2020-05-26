@@ -10,7 +10,7 @@
 
 2. Create a instance method for the Movie class called `prettyPrint` that returns a string formatted like this:
 
-  - "Title: The Matrix, Year: 1999, Score: 9"
+  - "Title: The Matrix, Year: 1999, Genre: Science Fiction, Score: 9"
 
 */  
 

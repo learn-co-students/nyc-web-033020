@@ -11,8 +11,10 @@
 ## Some Resources
 
 * [Object-oriented JavaScript for beginners](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+* [Class inheritance](https://javascript.info/class-inheritance)
 * [`new` operator - MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
 * [Classes - MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 * [Prototypal Inheritance](https://javascript.info/prototype-inheritance)
 * [Working with Classes](https://javascript.info/classes)
 * [Object prototypes - MDN docs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
+https://javascript.info/class-inheritance
