@@ -16,6 +16,10 @@ class Person
   def greeting
     raise "All subclasses of Person have to define a greeting method"
   end
+
+  def self.hey_there
+    puts "Hey there"
+  end
 end
 
 class Student < Person

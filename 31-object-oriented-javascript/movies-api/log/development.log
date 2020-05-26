@@ -929,3 +929,316 @@ Processing by Api::V1::MoviesController#index as */*
 Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.8ms | Allocations: 2465)
 
 
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:24:30 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 16ms (Views: 2.1ms | ActiveRecord: 6.3ms | Allocations: 8573)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:24:51 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.6ms | Allocations: 2483)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:31:06 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.8ms | Allocations: 2550)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:32:22 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.8ms | Allocations: 2483)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:34:25 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 0.7ms | Allocations: 2483)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:35:04 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.7ms | Allocations: 2465)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:35:57 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 2465)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:36:34 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 1.0ms | Allocations: 2465)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:38:04 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (1.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 1.4ms | Allocations: 2465)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:38:17 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.6ms | Allocations: 2465)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:39:36 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.7ms | Allocations: 2465)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:39:36 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (4.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 10ms (Views: 1.9ms | ActiveRecord: 4.9ms | Allocations: 2465)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:40:15 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (1.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 1.4ms | Allocations: 2465)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:43:10 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.8ms | Allocations: 2465)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:44:44 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 2465)
+
+
+Started GET "/api/v1/movies/3" for ::1 at 2020-05-26 11:44:50 -0400
+Processing by Api::V1::MoviesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:9:in `show'
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 2588)
+
+
+Started PATCH "/api/v1/movies/10" for ::1 at 2020-05-26 11:44:58 -0400
+Processing by Api::V1::MoviesController#update as JSON
+  Parameters: {"score"=>11, "id"=>"10", "movie"=>{"score"=>11}}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:15:in `update'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:17:in `update'
+  [1m[36mMovie Update (0.5ms)[0m  [1m[33mUPDATE "movies" SET "score" = $1, "updated_at" = $2 WHERE "movies"."id" = $3[0m  [["score", 11], ["updated_at", "2020-05-26 15:44:58.070015"], ["id", 10]]
+  ↳ app/controllers/api/v1/movies_controller.rb:17:in `update'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:17:in `update'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.5ms | Allocations: 3275)
+
+
+Started PATCH "/api/v1/movies/10" for ::1 at 2020-05-26 11:44:58 -0400
+Processing by Api::V1::MoviesController#update as JSON
+  Parameters: {"score"=>12, "id"=>"10", "movie"=>{"score"=>12}}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:15:in `update'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:17:in `update'
+  [1m[36mMovie Update (0.3ms)[0m  [1m[33mUPDATE "movies" SET "score" = $1, "updated_at" = $2 WHERE "movies"."id" = $3[0m  [["score", 12], ["updated_at", "2020-05-26 15:44:58.226126"], ["id", 10]]
+  ↳ app/controllers/api/v1/movies_controller.rb:17:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:17:in `update'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 3107)
+
+
+Started PATCH "/api/v1/movies/10" for ::1 at 2020-05-26 11:44:58 -0400
+Processing by Api::V1::MoviesController#update as JSON
+  Parameters: {"score"=>13, "id"=>"10", "movie"=>{"score"=>13}}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:15:in `update'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:17:in `update'
+  [1m[36mMovie Update (0.5ms)[0m  [1m[33mUPDATE "movies" SET "score" = $1, "updated_at" = $2 WHERE "movies"."id" = $3[0m  [["score", 13], ["updated_at", "2020-05-26 15:44:58.373012"], ["id", 10]]
+  ↳ app/controllers/api/v1/movies_controller.rb:17:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:17:in `update'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 3107)
+
+
+Started PATCH "/api/v1/movies/10" for ::1 at 2020-05-26 11:44:58 -0400
+Processing by Api::V1::MoviesController#update as JSON
+  Parameters: {"score"=>14, "id"=>"10", "movie"=>{"score"=>14}}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:15:in `update'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:17:in `update'
+  [1m[36mMovie Update (0.5ms)[0m  [1m[33mUPDATE "movies" SET "score" = $1, "updated_at" = $2 WHERE "movies"."id" = $3[0m  [["score", 14], ["updated_at", "2020-05-26 15:44:58.519973"], ["id", 10]]
+  ↳ app/controllers/api/v1/movies_controller.rb:17:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:17:in `update'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 3107)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:45:01 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 1.1ms | Allocations: 2465)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:47:31 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.7ms | Allocations: 2465)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:48:33 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 2465)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:49:47 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 1.1ms | Allocations: 2465)
+
+
+Started POST "/api/v1/movies" for ::1 at 2020-05-26 11:50:04 -0400
+Processing by Api::V1::MoviesController#create as JSON
+  Parameters: {"year"=>"1980", "title"=>"Jaws 2", "genre"=>"Horror", "imageUrl"=>"https://cdn11.bigcommerce.com/s-l71eudan7b/images/stencil/1280x1280/products/756/1354/bd06c9c2-6d01-438c-9303-c138bae756c2__34737.1559150763.jpg?c=2&imbypass=on", "score"=>0, "movie"=>{"title"=>"Jaws 2", "genre"=>"Horror", "score"=>0, "year"=>"1980", "imageUrl"=>"https://cdn11.bigcommerce.com/s-l71eudan7b/images/stencil/1280x1280/products/756/1354/bd06c9c2-6d01-438c-9303-c138bae756c2__34737.1559150763.jpg?c=2&imbypass=on"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:23:in `create'
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "genre", "score", "year", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Jaws 2"], ["genre", "Horror"], ["score", 0], ["year", 1980], ["imageUrl", "https://cdn11.bigcommerce.com/s-l71eudan7b/images/stencil/1280x1280/products/756/1354/bd06c9c2-6d01-438c-9303-c138bae756c2__34737.1559150763.jpg?c=2&imbypass=on"], ["created_at", "2020-05-26 15:50:04.586182"], ["updated_at", "2020-05-26 15:50:04.586182"]]
+  ↳ app/controllers/api/v1/movies_controller.rb:23:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:23:in `create'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 2673)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:51:29 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (2.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 9ms (Views: 3.1ms | ActiveRecord: 2.2ms | Allocations: 2619)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:51:39 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 2619)
+
+
+Started POST "/api/v1/movies" for ::1 at 2020-05-26 11:51:53 -0400
+Processing by Api::V1::MoviesController#create as JSON
+  Parameters: {"year"=>"1987", "title"=>"Jaws3", "genre"=>"Horror", "imageUrl"=>"https://cdn11.bigcommerce.com/s-l71eudan7b/images/stencil/1280x1280/products/756/1354/bd06c9c2-6d01-438c-9303-c138bae756c2__34737.1559150763.jpg?c=2&imbypass=on", "score"=>0, "movie"=>{"title"=>"Jaws3", "genre"=>"Horror", "score"=>0, "year"=>"1987", "imageUrl"=>"https://cdn11.bigcommerce.com/s-l71eudan7b/images/stencil/1280x1280/products/756/1354/bd06c9c2-6d01-438c-9303-c138bae756c2__34737.1559150763.jpg?c=2&imbypass=on"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:23:in `create'
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "genre", "score", "year", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Jaws3"], ["genre", "Horror"], ["score", 0], ["year", 1987], ["imageUrl", "https://cdn11.bigcommerce.com/s-l71eudan7b/images/stencil/1280x1280/products/756/1354/bd06c9c2-6d01-438c-9303-c138bae756c2__34737.1559150763.jpg?c=2&imbypass=on"], ["created_at", "2020-05-26 15:51:53.859056"], ["updated_at", "2020-05-26 15:51:53.859056"]]
+  ↳ app/controllers/api/v1/movies_controller.rb:23:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:23:in `create'
+Completed 200 OK in 19ms (Views: 0.6ms | ActiveRecord: 1.0ms | Allocations: 2620)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:52:19 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.6ms | Allocations: 2773)
+
+
+Started POST "/api/v1/movies" for ::1 at 2020-05-26 11:52:28 -0400
+Processing by Api::V1::MoviesController#create as JSON
+  Parameters: {"year"=>"1999", "title"=>"Jaws 4", "genre"=>"Horror", "imageUrl"=>"https://cdn11.bigcommerce.com/s-l71eudan7b/images/stencil/1280x1280/products/756/1354/bd06c9c2-6d01-438c-9303-c138bae756c2__34737.1559150763.jpg?c=2&imbypass=on", "score"=>0, "movie"=>{"title"=>"Jaws 4", "genre"=>"Horror", "score"=>0, "year"=>"1999", "imageUrl"=>"https://cdn11.bigcommerce.com/s-l71eudan7b/images/stencil/1280x1280/products/756/1354/bd06c9c2-6d01-438c-9303-c138bae756c2__34737.1559150763.jpg?c=2&imbypass=on"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:23:in `create'
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "genre", "score", "year", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Jaws 4"], ["genre", "Horror"], ["score", 0], ["year", 1999], ["imageUrl", "https://cdn11.bigcommerce.com/s-l71eudan7b/images/stencil/1280x1280/products/756/1354/bd06c9c2-6d01-438c-9303-c138bae756c2__34737.1559150763.jpg?c=2&imbypass=on"], ["created_at", "2020-05-26 15:52:28.511715"], ["updated_at", "2020-05-26 15:52:28.511715"]]
+  ↳ app/controllers/api/v1/movies_controller.rb:23:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:23:in `create'
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 2618)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:53:37 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.6ms | Allocations: 2927)
+
+
+Started POST "/api/v1/movies" for ::1 at 2020-05-26 11:53:47 -0400
+Processing by Api::V1::MoviesController#create as JSON
+  Parameters: {"year"=>"1000", "title"=>"Jaws 5", "genre"=>"Horror", "imageUrl"=>"https://cdn11.bigcommerce.com/s-l71eudan7b/images/stencil/1280x1280/products/756/1354/bd06c9c2-6d01-438c-9303-c138bae756c2__34737.1559150763.jpg?c=2&imbypass=on", "score"=>0, "movie"=>{"title"=>"Jaws 5", "genre"=>"Horror", "score"=>0, "year"=>"1000", "imageUrl"=>"https://cdn11.bigcommerce.com/s-l71eudan7b/images/stencil/1280x1280/products/756/1354/bd06c9c2-6d01-438c-9303-c138bae756c2__34737.1559150763.jpg?c=2&imbypass=on"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:23:in `create'
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "genre", "score", "year", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Jaws 5"], ["genre", "Horror"], ["score", 0], ["year", 1000], ["imageUrl", "https://cdn11.bigcommerce.com/s-l71eudan7b/images/stencil/1280x1280/products/756/1354/bd06c9c2-6d01-438c-9303-c138bae756c2__34737.1559150763.jpg?c=2&imbypass=on"], ["created_at", "2020-05-26 15:53:47.373122"], ["updated_at", "2020-05-26 15:53:47.373122"]]
+  ↳ app/controllers/api/v1/movies_controller.rb:23:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:23:in `create'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 2620)
+
+
+Started GET "/api/v1/movies/undefined" for ::1 at 2020-05-26 11:53:53 -0400
+Processing by Api::V1::MoviesController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:9:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 652)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=undefined):
+  
+app/controllers/api/v1/movies_controller.rb:9:in `show'
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 11:55:13 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.8ms | Allocations: 3080)
+
+
+Started POST "/api/v1/movies" for ::1 at 2020-05-26 11:55:30 -0400
+Processing by Api::V1::MoviesController#create as JSON
+  Parameters: {"year"=>"-09876", "title"=>"Jaws 6", "genre"=>"Family", "imageUrl"=>"https://cdn11.bigcommerce.com/s-l71eudan7b/images/stencil/1280x1280/products/756/1354/bd06c9c2-6d01-438c-9303-c138bae756c2__34737.1559150763.jpg?c=2&imbypass=on", "score"=>0, "movie"=>{"title"=>"Jaws 6", "genre"=>"Family", "score"=>0, "year"=>"-09876", "imageUrl"=>"https://cdn11.bigcommerce.com/s-l71eudan7b/images/stencil/1280x1280/products/756/1354/bd06c9c2-6d01-438c-9303-c138bae756c2__34737.1559150763.jpg?c=2&imbypass=on"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:23:in `create'
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "genre", "score", "year", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Jaws 6"], ["genre", "Family"], ["score", 0], ["year", -9876], ["imageUrl", "https://cdn11.bigcommerce.com/s-l71eudan7b/images/stencil/1280x1280/products/756/1354/bd06c9c2-6d01-438c-9303-c138bae756c2__34737.1559150763.jpg?c=2&imbypass=on"], ["created_at", "2020-05-26 15:55:30.993492"], ["updated_at", "2020-05-26 15:55:30.993492"]]
+  ↳ app/controllers/api/v1/movies_controller.rb:23:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:23:in `create'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 2619)
+
+
+Started GET "/api/v1/movies/18" for ::1 at 2020-05-26 11:55:38 -0400
+Processing by Api::V1::MoviesController#show as */*
+  Parameters: {"id"=>"18"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:9:in `show'
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 775)
+
+

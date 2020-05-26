@@ -10,45 +10,6 @@ document.addEventListener("DOMContentLoaded", function(event){
     "accept": "application/json"
   }
 
-  function createMovieLi(movieObj){
-    let li = document.createElement("li")
-    li.className = "movie card"
-    li.dataset.beef = 'cow'
-    li.dataset.id = movieObj.id
-
-    li.innerHTML = `
-      <h3>${movieObj.title}</h3>
-      <img alt="" src="${movieObj.imageUrl}" />
-      <h4>Year: ${movieObj.year}</h4>
-      <h4>Genre: ${movieObj.genre}</h4>
-      <h4>Score: <span>${movieObj.score}</span> </h4>
-      <button class="up-vote">Up Vote</button>
-      <button data-purpose="down-vote">Down Vote</button>
-      <button class="delete">&times;</button>
-    `
-
-    return li
-  }
-
-  const createMovieOption = movie => {
-    const option = document.createElement('option')
-    option.textContent = movie.title
-    option.value = movie.id
-
-    return option
-  }
-
-  const renderMovies = movies => {
-    const movieSelect = document.querySelector('#movie-select')
-
-    movies.forEach(function(movie){
-      const movieLi = createMovieLi(movie)
-      const movieOption = createMovieOption(movie)
-      movieSelect.append(movieOption)
-      ul.append(movieLi)
-    })
-  }
-
   function newMovieForm(){
     const form = document.createElement("form")
     form.name = "new-movie"
@@ -105,24 +66,26 @@ document.addEventListener("DOMContentLoaded", function(event){
     const imageUrl = form.imageUrl.value
     const score = 0
 
-    const movie = { 
+    const movieObj = { 
       year: year, 
       title: title, 
       genre: genre, 
       imageUrl: imageUrl, 
       score: score
     }
-    
-    const movieLi = createMovieLi(movie)
-    ul.prepend(movieLi)
 
     fetch(url,{  
       method: 'POST',
       headers: headers,
-      body: JSON.stringify(movie)
+      body: JSON.stringify(movieObj)
     })
     .then(response => response.json())
-    .then(console.log)
+    .then(movieObj => {
+      const movie = new Movie(movieObj)
+
+      movie.renderLi(ul)
+      movie.renderOption(select)
+    })
     
     form.reset()
   })
@@ -174,8 +137,12 @@ document.addEventListener("DOMContentLoaded", function(event){
   const getMovies = () => {
     fetch(url)
     .then(response => response.json())
-    .then(movies => {
-      renderMovies(movies)
+    .then(data => {
+      const movies = data.map(obj => {
+        return new Movie(obj)
+      })
+
+      Movie.renderMovies(movies, ul, select)
     })
   }
 
