@@ -36,3 +36,30 @@
 
 * create a new resource:
   * `rails g resource Api::V1::Movie title year:integer score:integer imageUrl`
+
+### CORS
+
+```ruby
+# initializers/cors.rb
+
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins '*'
+
+    resource '*',
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+  end
+end
+```
+
+```ruby
+# Gemfile
+
+#...
+
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+gem 'rack-cors'
+
+#...
+```
