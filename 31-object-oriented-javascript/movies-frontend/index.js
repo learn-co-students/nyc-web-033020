@@ -1,4 +1,4 @@
-console.log("Rails. Yasss. 🚂🙌🏻")
+console.log("OBJECTS")
 
 document.addEventListener("DOMContentLoaded", function(event){
 
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function(event){
       })
       .then(response => {
         e.target.parentElement.remove()
-        // remove movie from select element
+        // TODO: remove movie from select element
       })
 
     } else if(e.target.id === 'show-form'){
@@ -181,10 +181,3 @@ document.addEventListener("DOMContentLoaded", function(event){
 
   getMovies()
 })
-
-
-// √populate the select element with movie titles
-// √add change listener to select element
-// √on change, fetch to the show route for that movie
-// √render that movies details in the correct part of the DOM
-// remove movie from dropdown on delete

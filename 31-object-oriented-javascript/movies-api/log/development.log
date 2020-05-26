@@ -657,3 +657,58 @@ Processing by Api::V1::MoviesController#index as */*
 Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 2316)
 
 
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 10:11:09 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (4.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 21ms (Views: 1.1ms | ActiveRecord: 11.4ms | Allocations: 8520)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-26 10:11:41 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.7ms | Allocations: 2337)
+
+
+Started GET "/api/v1/movies/6" for ::1 at 2020-05-26 10:14:46 -0400
+Processing by Api::V1::MoviesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:9:in `show'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 2619)
+
+
+Started GET "/api/v1/movies/7" for ::1 at 2020-05-26 10:14:49 -0400
+Processing by Api::V1::MoviesController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:9:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 789)
+
+
+Started GET "/api/v1/movies/4" for ::1 at 2020-05-26 10:14:56 -0400
+Processing by Api::V1::MoviesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:9:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 770)
+
+
+Started GET "/api/v1/movies/9" for ::1 at 2020-05-26 10:14:58 -0400
+Processing by Api::V1::MoviesController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:9:in `show'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 770)
+
+
+Started GET "/api/v1/movies/10" for ::1 at 2020-05-26 10:15:06 -0400
+Processing by Api::V1::MoviesController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:9:in `show'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 786)
+
+
