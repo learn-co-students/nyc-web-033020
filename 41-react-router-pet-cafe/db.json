@@ -1,0 +1,98 @@
+{ "cats": [
+    {
+        "id": 1,
+        "name": "Crookshanks",
+        "happiness": -8,
+        "description": "I hate Scabbers!",
+        "image": "https://vignette.wikia.nocookie.net/harrypotter/images/f/ff/Crookshanks_FH.png/revision/latest?cb=20161118055031",
+        "isAdopted": true
+    },
+    {
+        "id": 2,
+        "name": "Mrs. Norris",
+        "happiness": -2,
+        "description": "Get 'em Mr. Filch!",
+        "image": "https://cdn.pastemagazine.com/www/articles/61-Harry-Potter-Mrs-Norris-100-Best-Cats.jpg",
+        "isAdopted": true
+    },
+    {
+        "id": 3,
+        "name": "Binx from Hocus Pocus", 
+        "happiness": 2,
+        "description": "Bubble bubble toil and trouble!",
+        "image": "https://cdn.pastemagazine.com/www/articles/53-Hocus-Pocus-Binx-100-Best-Cats.jpg",
+        "isAdopted": false
+    },
+    {
+        "id": 4,
+        "name": "Snowbell from Stuart Little",
+        "happiness": 3,
+        "description": "I will eat you, little mouse.",
+        "image": "https://cdn.pastemagazine.com/www/articles/52-Stuart-Little-Snowbell-100-Best-Cats.jpg",
+        "isAdopted": false
+    },
+    {
+        "id": 5,
+        "name": "Puss in Boots from Shrek 2 ",
+        "happiness": 8,
+        "description": "Look at my cute little eyes! And beware my sword!",
+        "image": "https://cdn.pastemagazine.com/www/articles/8-Shrek-2-Puss-in-Boots-100-Best-Cats.jpg",
+        "isAdopted": false
+    },
+    {
+        "id": 6,
+        "name": "Jiji from Kiki’s Delivery Service",
+        "happiness": 0,
+        "description": "Meow",
+        "image": "https://cdn.pastemagazine.com/www/articles/50-Kikis-Delivery-Service-Jiji-100-Best-Cats.jpg",
+        "isAdopted": false
+    },
+    {
+        "id": 7,
+        "name": "Kitten from Keanu",
+        "happiness": 0,
+        "description": "Key and Peele are wild y'all.",
+        "image": "https://cdn.pastemagazine.com/www/articles/32-Keanu-Kitten-100-Best-Cats.jpg",
+        "isAdopted": false
+    },
+    {
+        "id": 8,
+        "name": "Church from Pet Sematary",
+        "happiness": 0,
+        "description": "meoooRAAWWWRRR",
+        "image": "https://cdn.pastemagazine.com/www/articles/29-Pet-Sematary-Church-100-Best-Cats.jpg",
+        "isAdopted": false
+    },
+    {
+        "id": 9,
+        "name": "Rajah from Aladdin ",
+        "happiness": 0,
+        "description": "Huh?",
+        "image": "https://cdn.pastemagazine.com/www/articles/25-Aladdin-Rajah-100-Best-Cats.jpg",
+        "isAdopted": false
+    },
+    {
+        "id": 10,
+        "name": "Si and Am from Lady and the Tramp",
+        "happiness": 0,
+        "description": "We are si-a-mese if you ple-ease. We are si-a-mese if you don’t please…",
+        "image": "https://cdn.pastemagazine.com/www/articles/20-Lady-and-the-Tramp-Si-and-Am-100-Best-Cats.jpg",
+        "isAdopted": false
+    },
+    {
+        "id": 11,
+        "name": "Goose from Captain Marvel",
+        "happiness": 0,
+        "description": "The tesseract actually tastes quite gross",
+        "image": "https://cdn.pastemagazine.com/www/articles/2019/12/11/Goose-captain-marvel.jpg",
+        "isAdopted": false
+    },
+    {
+        "id": 12,
+        "name": "Mr. Bigglesworth from Austin Powers",
+        "happiness": 0,
+        "description": "All I want is some fur...",
+        "image": "https://cdn.pastemagazine.com/www/articles/18-Austin-Powers-the-Spy-Who-Shagged-Me-Mr-Bigglesworth-100-Best-Cats.jpg",
+        "isAdopted": false
+    }
+]}

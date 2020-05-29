@@ -1,0 +1,177 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Joe Exotic"
+        },
+        {
+            "id": 2,
+            "name": "Carole Baskin"
+        },
+        {
+            "id": 3,
+            "name": "Evans Wang"
+        }, 
+        {
+            "id": 4,
+            "name": "Steven Balasta"
+        }
+    ],
+    "channels": [
+        {
+            "id": 1,
+            "name": "Tiger Lovers Unite",
+            "starred": false
+        },
+        {
+            "id": 2,
+            "name": "Flatiron Sayings",
+            "starred": true
+        },
+        {
+            "id": 3,
+            "name": "Absolute Nonsense",
+            "starred": true
+        }
+
+    ],
+    "messages": [
+        {
+            "id": 1,
+            "time": "9:05am",
+            "channelId": 1,
+            "body": "I went to work every day prepared to die in a tiger cage. Dying doesn’t scare me. At all.",
+            "author": "Joe Exotic",
+            "userId": 1
+        },
+        {
+            "id": 2,
+            "time": "9:05am",
+            "channelId": 1,
+            "body": "I’m outspoken, good looking, love to party and have fun.",
+            "author": "Joe Exotic",
+            "userId": 1
+        },
+        {
+            "id": 3,
+            "time": "9:05am",
+            "channelId": 1,
+            "body": "You can see how they go from being so sweet to tearing your face off, just like that, and it’s amazing to have that range.",
+            "author": "Carole Baskin",
+            "userId": 2
+        },
+        {
+            "id": 4,
+            "time": "9:05am",
+            "channelId": 1,
+            "body": "Does it feel good to stand on my stage with 500-pound tigers and everybody envy you? Absolutely.”",
+            "author": "Joe Exotic",
+            "userId": 1
+        },
+        {
+            "id": 5,
+            "time": "9:05am",
+            "channelId": 1,
+            "body": "I really appreciate the fact that none of these people like me.",
+            "author": "Carole Baskin",
+            "userId": 2
+        },
+        {
+            "id": 6,
+            "time": "9:05am",
+            "channelId": 1,
+            "body": "My emails says, /“Judge me by the enemies I have made./”",
+            "author": "Carole Baskin",
+            "userId": 2
+        },
+        {
+            "id": 7,
+            "time": "9:05am",
+            "channelId": 2,
+            "body": "Beep Boop",
+            "author": "Evans Wang",
+            "userId": 3
+        },
+        {
+            "id": 8,
+            "time": "9:05am",
+            "channelId": 2,
+            "body": "Beef",
+            "author": "Steven Balasta",
+            "userId": 4
+        },
+        {
+            "id": 9,
+            "time": "9:05am",
+            "channelId": 2,
+            "body": "Bless Up",
+            "author": "Evans Wang",
+            "userId": 3
+        },
+        {
+            "id": 10,
+            "time": "9:05am",
+            "channelId": 3,
+            "body": "Cookie icing sweet gummies lollipop muffin wafer.",
+            "author": "Evans Wang",
+            "userId": 3
+        },
+        {
+            "id": 11,
+            "time": "9:05am",
+            "channelId": 3,
+            "body": "Toffee pudding gummies I love croissant tiramisu cupcake cheesecake dessert. Jelly beans cake lollipop chupa chups.",
+            "author": "Steven Balasta",
+            "userId": 4
+        },
+        {
+            "id": 12,
+            "time": "9:05am",
+            "channelId": 3,
+            "body": "Cake tootsie roll marzipan.",
+            "author": "Steven Balasta",
+            "userId": 4
+        },
+        {
+            "id": 13,
+            "time": "9:05am",
+            "channelId": 3,
+            "body": "Carrot cake I love gingerbread candy canes. Gummies biscuit pastry chocolate cake.",
+            "author": "Carole Baskin",
+            "userId": 2
+        },
+        {
+            "id": 14,
+            "time": "9:05am",
+            "channelId": 3,
+            "body": "Sweet roll icing chupa chups soufflé tootsie roll donut dessert jujubes. I love jelly pie jujubes cotton candy. Oat cake topping cookie lollipop.",
+            "author": "Joe Exotic",
+            "userId": 1
+        },
+        {
+            "id": 15,
+            "time": "9:05am",
+            "channelId": 3,
+            "body": "Chocolate pastry tart.",
+            "author": "Steven Balasta",
+            "userId": 4
+        },
+        {
+            "id": 16,
+            "time": "9:05am",
+            "channelId": 3,
+            "body": "Pudding sugar plum marshmallow I love sesame snaps.",
+            "author": "Joe Exotic",
+            "userId": 1
+        },
+        {
+            "id": 17,
+            "time": "9:05am",
+            "channelId": 3,
+            "body": "Croissant I love chupa chups halvah wafer pudding pudding. Chocolate marzipan gummies gummi bears icing cotton candy.",
+            "author": "Evans Wang",
+            "userId": 3
+        }
+        
+    ]
+}
