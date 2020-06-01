@@ -5,8 +5,8 @@ const GuidanceItem = () => {
         <tr>
             <td>{props.factor.title}</td>
             <td><img src={props.factor.image} alt={props.factor.title}/></td>
-            <td>{/** TODO: Add the correct prop here */}</td>
-            <td>{/** TODO: Add the correct prop here */}</td>
+            <td>{props.factor.description}</td>
+            <td>{props.factor.stars}</td>
         </tr>
     )
 }
