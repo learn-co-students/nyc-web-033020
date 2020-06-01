@@ -13,7 +13,7 @@ export default class Wheel extends React.Component {
                  *         Hint: Use your ES6 techniques
                  */}
                 wellnessFactors.map = (itemData) => {
-
+                    
                 }
                 <WellnessItem props={ wellnessFactors[0] } /> 
             </Pie>

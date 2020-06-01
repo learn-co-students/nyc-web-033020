@@ -16,8 +16,8 @@ export default class WellnessItem extends React.Component {
 }
 
 WellnessItem.defaultProps = {
-  color: "999"
- }
+  color: 'grey'
+}
  
 
 /**
