@@ -18,7 +18,7 @@ export default class GuidanceContainer extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {(wellnessFactors.map(item => GuidanceItem(item) )).sort(( a, b) => a-b)}
+                        {(wellnessFactors.sort((a, b) => b.stars-a.stars).map(item => GuidanceItem(item) ))}
                         {/** TODO:  Render GuidanceItems here
                                     Check the GuidanceItem component for the expect props
                                     BUG CATCHER: There's a bug in GuidanceItem that will make it fail. 
