@@ -1,79 +1,111 @@
-# SlackIron Lifecycle Lab!
-Welcome to SlackIron! You guessed it... it's something like a Slack clone. In this app, you'll have to fetch all the channels and render them. When a user clicks on a given channel, the messages need to populate and when they select a new channel, the messages need to update. Fairly straightforward, hopefully. You have a giant hint here! *MOST* of what you'll be expected to implement will require lifecycle methods. *MOST* but potentially not all. Be meticulous in planning out how you will implement the features. 
+Component Lifecycle Methods
+===========================
 
-Notice in this lab, that there are `MVP` and `Stretch` deliverables. In Mod5, you'll be tasked with choosing what is Minimum Viable Product `MVP` or Stretch for your app. Sometimes tasks are included in Stretch that are easy - but are not essential to the use case of the app. Deliverables are split in this way for this lab to start your adjustment to that split. 
+## SWBATs
+- [ ] Write methods that interact with data at different points throughout a component's life
+- [ ] Identify the most-used Lifecycle Methods
+- [ ] Explain why we `fetch` data using `componentDidMount`
+- [ ] Identify problems caused by asynchronicity in React
 
-Remember, decide based on the feature/deliverable what code needs to be written or changed and then go do it! Play around with the code and test often. 
+## Lecture Notes
 
-Look out for `TODO`s in comments. Use the Core Deliverables listed below to guide you and find the `TODO`s if you're feeling stuck.
+[React Spinner Loader](https://www.npmjs.com/package/react-loader-spinner)
 
-![alt text][all_deliverables]
+### Mounting (Birth)
+When a component is initially rendered
 
-[all_deliverables]: ./public/SlackironAll.gif "All Deliverables"
+#### constructor
+- setting initial state (old school)
+- binding functions (old school)
+- initialize outside libraries / data
 
-## Skills and Concepts to Practice
-- Lifecycle Methods including `componentDidMount`, `componentDidUpdate`, and  `componentWillUnmount` 
-- Choosing what to represent in state and where
-- Defining methods, passing them as props, and invoking them
-- Using intervals
-
-## Setup
-After pulling your cohort repo and navigating to the correct folder:
-- Run `npm install` in your terminal
-- Run `npm start` and a JSON server will spin up a mock back-end API and you can access the data at `http://localhost:6001/channels`. Your react application will also start, on port `6002`. The response should contain an array of objects that are structured as follows:
+```js
+constructor(props){
+  super()
+  this.state = {
+    beef: []
+  }
+  this.handleChange = this.handleChange.bind(this)
+}
 ```
-[{
-"id": 1,
-"name": "Tiger Lovers Unite",
-"starred": false
-},
-{
-"id": 2,
-"name": "Flatiron Sayings",
-"starred": true
-},
-{
-"id": 3,
-"name": "Absolute Nonsense",
-"starred": true
-}]
-```
-- Remember to `git add .` then `git commit -m "helpful message"` and `git push` when you're done or before lecture. 
+
+#### render
+- return JSX to become the DOM
+- show thangs
+
+#### componentDidMount
+- fetching
+- setting intervals
+- customer event listeners
+
+### Updating (Life)
+Called everytime we `setState` or trigger any update
+
+#### componentDidUpdate
+- used to change state when comparison between old and new props/state is needed
+
+### Unmounting (Death)
+Leaving the page (conditional rendering)
+
+#### componentWillUnmount
+- used to clean-up processes (intervals)
 
 
-## What You Already Have
-### Components
-- `App`
-- `Nav`
-- `ChannelsContainer`
-- `MessageContainer`
-- `Message`
+## Summary
+
+Post React 16.3, some lifecycle methods were slated for deprecation in 17.0 and new ones were introduced. These are the blogs/diagrams you'll want to read/see to explain each:
+
+- [Old Lifecycle Methods Diagram](https://hackernoon.com/reactjs-component-lifecycle-methods-a-deep-dive-38275d9d13c0)
+- [New Lifecycle Methods Diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+  - [Original Source (a tweet by Dan Abramov)](https://twitter.com/dan_abramov/status/981712092611989509)
+- [`setState` Cheatsheet](https://levelup.gitconnected.com/react-cheatsheet-this-setstate-8bc12c5f40f5)
+- Remember, not all of what you will see is technically true. People have opinions.
+- For example, here there are a few places where you _can_ put `setState`, but they would be code smells as you probably wouldn't want to be doing them in those lifecycle methods.
+- The important part is understanding where you _mustn't_ put `setState` as it could cause an infinite loop. `render` being the most obvious place _not_ to do `setState`.
 
 
-### Additional Files
-- `requests.js` has prepared and exported fetch requests for you. Make sure you're importing them and using them correctly. You shouldn't need additional ones unless you wanna get fancy and add some new features (totally encouraged).
-- `db.json` stores the data for our json-server. Check it out to make sure you know the format of the data.  
+### Most Commonly Used Methods
+- *constructor(props)*
+- *render()*
+- *componentDidMount()*
+- *componentDidUpdate(prevProps, prevState, snapshot)*
+- *componentWillUnmount()*
+
+### Birth (Mounting)
+- *constructor(props)*
+  - called before it is mounted
+  - set initial state here
+- static getDerivedStateFromProps(props, state)
+  - invoked right before calling the render method, both on the initial mount and on subsequent updates. It should return an object to update the state, or null to update nothing.
+- *render()*
+  - called after mounting and updating
+- *componentDidMount()*
+  - invoked immediately after a component is mounted (inserted into the tree).
+  - this is where you should request data from remote endpoints
+
+### Life (Updating)
+- static getDerivedStateFromProps(props, state)
+  - invoked right before calling the render method, both on the initial mount and on subsequent updates. It should return an object to update the state, or null to update nothing.
+- shouldComponentUpdate(nextProps, nextState)
+  - invoked before rendering when new props or state are being received
+  - returns boolean which determines if render should be called
+- *render()*
+  - called after mounting and updating
+- getSnapshotBeforeUpdate(prevProps, prevState)
+  - invoked right before the most recently rendered output is committed to e.g. the DOM. It enables your component to capture some information from the DOM (e.g. scroll position) before it is potentially changed. Any value returned by this lifecycle will be passed as a parameter to componentDidUpdate()
+- *componentDidUpdate(prevProps, prevState)*
+  - invoked immediately after updating occurs. This method is not called for the initial render
+  - watch out for infinite loops if setting state!
+
+### Death (Unmounting)
+- *componentWillUnmount()*
+  -  invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests, or cleaning up any subscriptions that were created in componentDidMount().
+
+### Benchmarking (Extra Reading)
+
+* [How to Benchmark React Components](https://engineering.musefind.com/how-to-benchmark-react-components-the-quick-and-dirty-guide-f595baf1014c)
+* [Lifecycle Methods](https://gist.github.com/alexgriff/1b5850cac9a1d565f0cb66a941505b99)
 
 
-## Deliverables 
-### MVP Deliverables
-- Upon page load, the user should see all channels in the left side panel
-- When a user clicks on a channel the first time, they should see all the messages populated in the message container and the channel info at the top of the message container. 
-- When a user selects a new channel, update the channel information and replace all the messages inside of Message container.
-
-### Stretch Deliverables
-If you get through all of the Core Deliverables, try your hand at the Advanced ones. Check out the gif below for how it should look. 
-- In the channels list, create separate sections for `Starred` channels and `General` Channels.
-- Include a timer in the channel info of `MessageContainer` that says someting like `Been listening for {seconds} seconds`. It should update every second and start back at zero when you switch channels
-
-## Helpful Hints and Reminders
-- `componentDidMount` runs *once* right after the component initially mounts to the DOM. It's helpful for anything that needs to happen once and at the very beginning of the component's life, like initial fetches, subscribing to channels, and setting intervals.
-- `componentDidUpdate` runs anytime state or props change and receives two arguments: `prevProps` and `prevState`. Be careful setting state inside of componentDidUpdate - if you set state during every time componentDidUpdate runs you'll hit a `maximum call depth exceeded` error. It's used anytime you need to compare prevProps to current props, or prevState to the current state.
-- `componentWillUnmount` runs right *before* the component comes off of the screen and only once. It's used for clean up - like unsubscribing to channels or clearing intervals. 
-
-## Resources
-- [Prior Video: Watch up to min 30](https://youtu.be/zBvVrN_FiX8)
-- [Lifecycle Docs](https://reactjs.org/docs/state-and-lifecycle.html)
-- [Lifecycle Visualizer](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 
 

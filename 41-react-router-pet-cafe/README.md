@@ -1,105 +1,107 @@
-React Router
-============
+# Pet Cafe React Router Lab!
+Welcome to the Pet Cafe! Here you can visit (currently just) cats, some of whom are up for adoption. You can learn their names, chat with them a little, and see how happy they are. Soon, you'll be able to visit Dogs and Reptiles as well! 
 
-## SWBAT
+This app is designed to help you practice using the React Router library. All of the components are already set up but currently they're all rendered on the same page! We don't want that!! The user should be able to navigate between pages and bookmark their favorite pets! There is guidance below for what URL should show the user what view. 
 
-- [ ] Create a multi-page SPA
-- [ ] Explain the advantages of using React Router
-- [ ] Utilize the most common `react-router` components to build a SPA: `BrowserRouter`, `Route`, `Switch`, `Link`, and `NavLink`
-- [ ] Use `push` and `history` to navigate pages
-- [ ] Create dynamic routes and use `params`
-- [ ] Make the distinction between `state` being one _Single Source of Truth_ and `react-router` being another _Single Source of Truth_
+In addition, you will get to choose which tools provided by React Router are appropriate to build each behavior. Check the notes below and the React Router docs (linked in SWBATs) in order to choose. 
+
+Look out for `TODO`s in comments. Use the Core Deliverables listed below to guide you and find the `TODO`s if you're feeling stuck.
 
 
+## Skills and Concepts to Practice
+- React Router
+- General navigation of a React application 
+- Client Side Routing
 
-## Movie Review Fullstack 
-### Setup 
-- Run frontend: `npm start` 
-- Run backend: `rails s -p 3001`
-
-### Features
-- [MovieApp Wireframe and Component Hierarchy](https://awwapp.com/b/ui0yjws5o/)
-- [ ] Route for login
-- [ ] Route for signup
-- [ ] Route for home page
-- [ ] Enable navbar to move between home/login/signup
-- [ ] Clicking on a movie movies us to `/movies/:id`
-- [ ] Use dynamic route to fetch a display single movie view
-
-## Lecture Notes
-- [Example with All of Ze Routes](https://github.com/sbal13/Project_Athena_client/blob/master/src/App.js)
-
-## SPAs
-
-### Benefits
-
-
-
-### Challenges 
-
-
-
-## Dynamic Routing from Rails
-
-
-
-
-
-### Component Notation vs Render Notation
-Component Notation just takes a component name and automatically adds the routerProps as props to it (history, location, match)
-
-Render Notation takes a callback that returns a component, written as JSX. We do this so we can pass our own props.
-if you need routerProps, need to explicitly pass to your component
-
-
-## Parking Lot
-
-
-### Using React Router
-`npm install react-router-dom --save`
-
-### Static vs Dynamic Routing
-
-Server-side vs Client-side Routing.
-
-- Client-side == no more request response.
-- This results in a much faster/smoother feeling website.
-
-**Why do we even need routes?**
-
-- The user can use forward/back to navigate your app
-- The user can navigate via urls
-- We can make urls describe the action that the user might be taking
-- Users can bookmark urls
-
-**What are the drawbacks to client-side routing?**
-
-- We're loading all of our frontend at once, so it might add to the initial load time
-- We have to design all of our routes to be coupled with our component structure (which can be a good thing long-term)
-
-### HTML5 History API
-
-You can manipulate the URL in your browser with these:
-
-```javascript
-window.history.pushState({}, null, 'page');
-window.history.back();
-window.history.forward();
+## Setup
+After cloning down the project:
+- Run `git checkout -b yourname` in your terminal to create your own branch
+- Run `npm install` in your terminal
+- Run `npm start` and a JSON server will spin up a mock back-end API and you can access the data at `http://localhost:7001/cats`. Your react application will also start, on port `7002`. The response should contain an array of objects that are structured as follows:
 ```
+[{
+"id": 1,
+"name": "Crookshanks",
+"happiness": -8,
+"description": "I hate Scabbers!",
+"image": "https://vignette.wikia.nocookie.net/harrypotter/images/f/ff/Crookshanks_FH.png/revision/latest?cb=20161118055031",
+"isAdopted": true
+},
+{
+"id": 2,
+"name": "Mrs. Norris",
+"happiness": -2,
+"description": "Get 'em Mr. Filch!",
+"image": false,
+"isAdopted": true
+},
+{
+"id": 3,
+"name": "Binx from Hocus Pocus",
+"happiness": 2,
+"description": "Bubble bubble toil and trouble!",
+"image": false,
+"isAdopted": false
+}]
+```
+- Remember to `git add .` then `git commit -m "helpful message"` and `git push` when you're done or before lecture. 
 
-Combine that with `if/else` logic and tracking history and you get `react-router`.
 
-### React Router API
+## What You Already Have
+### Components
+- `App`
+- `Auth`: renders the login/signup form
+- `Help`: renders the help question form
+- `Home`
+- `Nav`
+- `PetCard`: renders a single pet in the PetIndex
+- `PetIndex`: renders all of the pets 
+- `PetProfile`: renders a single pet's page
 
-> To get your intuition in line with React Router’s, think about components, not static routes. Think about how to solve the problem with React’s declarative composability because nearly every “React Router question” is probably a “React question”.
-> [_source: React Router Philosophy_](https://reacttraining.com/react-router/web/guides/philosophy)
+
+### Additional Files
+- `db.json` stores the data for our json-server. Check it out to make sure you know the format of the data.  
+- `index.js` inside of components provides an interface to export all of the components inside of that folder from a single source. Check it out! 
+
+
+## Deliverables 
+### Core Deliverables
+Endpoints 
+- `/` should show `Home` component with the "Welcome to Pet Cafe" screen
+- `/pets` should show the `PetIndex` component
+- `/pets/:id` should show the `PetProfile` component
+- `/login` should show the `Auth` component
+- `/help` should show the `Help` component
+
+Deliverables
+- Incorporate React Router such that if a user goes to the url bar and manually changes the URL, they view the correct components as described above.
+- When a user clicks the buttons in the Navbar, they should be navigated to the correct URL and therefore view the correct components.
+- When a user submits a questions in `Help` or submits their login in `Auth`, they should be redirected to `/pets`.
+- When a user clicks on `Visit ...` on a `PetCard`, it should navigate them to the correct `/pets/:id` url and `PetProfile` needs to fetch and show the correct cat. 
+- When the user clicks `Return to the Cafe Floor` in `PetProfile` they should be sent back to the all pets view. 
+
+### Advanced Deliverables
+If you get through all of the Core Deliverables, try your hand at the Advanced ones. Check out the gif below for how it should look. 
+- When a user clicks on the arrows in the `PetProfile` navigate to the prior or next pet based on id. This should update both the URL and the view. 
+- Conditionally render the arrows in `PetProfile` only when they can be used (ie no back arrow when at `/pets/1`)
+
+## Want some extra fun? 
+- Look into the hooks that React Router uses. 
+- Check out the React Router v6 Preview Blog and all of the blogs below! 
+
+
 
 ## Resources
-
-- [HTML5 History API MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/History_API)
-- [React Router Github](https://github.com/ReactTraining/react-router)
-- [React Router Website](https://reacttraining.com/react-router/)
-
+- [React Router Training](https://reacttraining.com/react-router/web/guides/quick-start)
+- [React Router V6 Preview](https://reacttraining.com/blog/react-router-v6-pre/)
+- [React Router Cheat Sheet](http://www.developer-cheatsheets.com/react-router)
 
 
+### React Router Tools
+- BrowserRouter ie `<BrowserRouter><App /></BrowserRouter>`
+- Route ie `<Route path="/home" render={routerProps => <HomePage movies={movies} {...routerProps}/>}/>`
+- Switch and exact ie `<Switch>  <Route path="/movies" component={MoviesPage}/>  <Route exact path="/" component={HomePage}/>  </Switch>`
+- Link and NavLink ie `<Link to="/">Home</Link>`
+- routerProps including history, match and params and methods like `history.push('/home')`
+- and more! check the docs! 
 
