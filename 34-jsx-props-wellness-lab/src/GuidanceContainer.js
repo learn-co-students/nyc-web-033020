@@ -24,6 +24,19 @@ export default class GuidanceContainer extends React.Component {
                                             Can you find it? 
                                             What warning did you get and how did it help you?
                         */}
+                        {
+                            wellnessFactors.sort((a,b) => {
+							return b.stars - a.stars
+						}).map(factor => {
+							return <GuidanceItem 
+								title={factor.title}
+								image={factor.image}
+								description={factor.description}
+								stars={factor.stars}
+								isPriority={factor.isPriority ? "Yes" : "No"}
+							/>
+						})
+                        }
                            
                     </tbody>
                 </table>
