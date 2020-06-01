@@ -2,12 +2,13 @@ import React from 'react';
 
 
 const GuidanceItem = (props) => {
+    const {title, image, description,stars} =props
     return (
         <tr>
-            <td>{props.title}</td>
-            <td><img src={props.image} alt={props.title}/></td>
-            <td>{ props.description}</td>
-            <td>{ '⭐️'.repeat(props.stars)}</td>
+            <td>{title}</td>
+            <td><img src={image} alt={title}/></td>
+            <td>{ description}</td>
+            <td>{ '⭐️'.repeat(stars)}</td>
         </tr>
     )
 }
