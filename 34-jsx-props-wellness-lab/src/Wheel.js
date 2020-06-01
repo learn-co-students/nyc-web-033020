@@ -5,16 +5,14 @@ import { Pie } from './styles';
 
 
 export default class Wheel extends React.Component {
-    
+
     render(){
         return (
             <Pie size={300}>
             { wellnessFactors.map(item => 
             <WellnessItem 
-            id={item.id} 
-            key={item.id}
-            color={item.color} 
-            title={item.title}
+            {...item} 
+            key={item.id}  
             />) }
 
                 {/** TODO: map over your wellness factors and create a WellnessItem for each. 

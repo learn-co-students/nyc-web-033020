@@ -15,6 +15,7 @@ export default class GuidanceContainer extends React.Component {
                             <td>Image</td>
                             <td>Description</td>
                             <td>Stars</td>
+                            <td>IsPriority</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -24,12 +25,9 @@ export default class GuidanceContainer extends React.Component {
                                             Can you find it? 
                                             What warning did you get and how did it help you?
                         */}
-                        { wellnessFactors.map(item => <GuidanceItem 
-                        title={item.title}
+                        { wellnessFactors.sort((a, b)=>(a.stars - b.stars)).map(item => <GuidanceItem 
+                        {...item}
                         key={item.id}
-                        image={item.image}
-                        description={item.description}
-                        stars={item.stars}
                         />) }
                     </tbody>
                 </table>
