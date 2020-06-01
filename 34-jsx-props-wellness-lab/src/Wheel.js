@@ -7,7 +7,7 @@ import { Pie } from './styles';
 export default class Wheel extends React.Component {
 
     genWellnessItems = () => {
-        return this.props.values.map(wellnessItem => <div className="item">{this.props}</div>)
+        return this.props.map(wellnessItem => <HoldCSSDeck rotate={id} />)
     }
 
     render(){
