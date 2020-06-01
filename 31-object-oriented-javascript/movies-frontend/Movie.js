@@ -13,4 +13,16 @@
   - "Title: The Matrix, Year: 1999, Score: 9"
 
 */  
+class Movie {
+  constructor(title, year, imageUrl, genre, score){
+    this.title = title;
+    this.year = year;
+    this.imageUrl = imageUrl;
+    this.genre = genre;
+    this.score = score;
+  }
 
+  prettyPrint = () =>{
+    console.log(`Title:${this.title}, Year:${this.year}, Score:${this.score}`)
+  }
+}
