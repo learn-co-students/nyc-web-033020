@@ -1,5 +1,6 @@
 import React from 'react';
 import { HoldCSSDeck, PieCSSDeck } from './styles';
+import { wellnessFactors } from './data';
 
 
 export default class WellnessItem extends React.Component {
@@ -15,6 +16,10 @@ export default class WellnessItem extends React.Component {
     }
 }
 
+
+WellnessItem.defaultProps = {
+    color: 808080
+}
 /**
  *  TODO: Add default props to the WellnessItem for color 
  *          the default color should be some kind of grey so it stands out
