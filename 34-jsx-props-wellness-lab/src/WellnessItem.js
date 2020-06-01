@@ -1,7 +1,6 @@
 import React from 'react';
 import { HoldCSSDeck, PieCSSDeck } from './styles';
 
-
 export default class WellnessItem extends React.Component {
     render(){
         const { id, color, title } = this.props
@@ -14,6 +13,11 @@ export default class WellnessItem extends React.Component {
         )
     }
 }
+
+WellnessItem.defaultProps = {
+    color: 'grey'
+};
+
 
 /**
  *  TODO: Add default props to the WellnessItem for color 

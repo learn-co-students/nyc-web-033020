@@ -1,4 +1,4 @@
-export const wellnessFactors = [
+ export const wellnessFactors = [
     {
         id: 1,
         title: 'Physical',

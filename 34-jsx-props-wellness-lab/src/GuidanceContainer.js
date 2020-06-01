@@ -5,6 +5,7 @@ import GuidanceItem from './GuidanceItem';
 export default class GuidanceContainer extends React.Component {
 
     renderItemInfo = () => {
+        const array = wellnessFactors.map(factor => <GuidanceItem factor={factor}/>)
         return (
             <div>
                 <h3>Wellness Factors Described</h3>
@@ -24,7 +25,7 @@ export default class GuidanceContainer extends React.Component {
                                             Can you find it? 
                                             What warning did you get and how did it help you?
                         */}
-                           
+                        {array.sort((a,b) => a - b)}
                     </tbody>
                 </table>
             </div>
