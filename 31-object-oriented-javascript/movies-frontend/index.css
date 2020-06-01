@@ -1,0 +1,52 @@
+img{
+    height: 30%;
+    width: 30%;
+    box-shadow: 7px 7px 5px #888888;
+}
+#movie-container{
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+}
+.card{
+    width: 45%;
+    border-style: double;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 7px 7px 5px #888888; 
+}
+
+.movie{
+    width: 80%;
+    border-style: double;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 7px 7px 5px #888888;
+}
+
+.new-movie-container{
+    width: 30%;
+    border-style: double;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 7px 7px 5px #888888;
+}
+
+#new-movie{
+    margin: 10px;
+}
+
+#movie-list{
+    list-style-type: none;
+}
+
+.left{
+    display: inline-block;
+    width: 49%;
+}
+
+.right{
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+}

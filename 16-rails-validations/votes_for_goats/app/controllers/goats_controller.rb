@@ -3,6 +3,11 @@ class GoatsController < ApplicationController
 
   def index 
     @goats = Goat.all
+
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @goats, include: :votes, except: [:updated_at, :created_at] }
+    end
     # render :index
   end
 
