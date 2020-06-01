@@ -23,7 +23,8 @@ export default class GuidanceContainer extends React.Component {
                                     BUG CATCHER: There's a bug in GuidanceItem that will make it fail. 
                                             Can you find it? 
                                             What warning did you get and how did it help you?
-                        */}
+                        */
+                        wellnessFactors.map(item => <GuidanceItem title={item.title} factor={item}/>)}
                            
                     </tbody>
                 </table>
