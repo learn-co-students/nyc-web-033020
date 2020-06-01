@@ -18,7 +18,12 @@ export default class GuidanceContainer extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <GuidanceItem />
+
+                        { wellnessFactors.sort((a,b) => b.stars - a.stars).map(factor => 
+                        <GuidanceItem 
+                            key={factor.id}
+                            {...factor} />
+                        )}       
                            
                     </tbody>
                 </table>

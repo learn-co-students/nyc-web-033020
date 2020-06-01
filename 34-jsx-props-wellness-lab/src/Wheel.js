@@ -9,7 +9,7 @@ export default class Wheel extends React.Component {
         return (
             <Pie size={300}>
                 {wellnessFactors.map(factor => {
-						return <WellnessItem key={factor.id} id={factor.id} color={factor.color} title={factor.title} isPriority={factor.isPriority} />
+						return <WellnessItem key={factor.id} {...factor} />
                     })
                 }
                 {/** TODO: map over your wellness factors and create a WellnessItem for each. 
