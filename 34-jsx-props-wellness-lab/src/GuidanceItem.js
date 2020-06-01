@@ -9,7 +9,7 @@ class GuidanceItem extends React.Component {
             	<td><img src={image} alt={title}/></td>
             	<td>{description}</td>
             	<td>{'⭐️'.repeat(stars)}</td>
-            	<td>{isPriority}</td>
+            	<td>{isPriority ? 'Yes' : 'No'}</td>
         	</tr>
     	)
     }

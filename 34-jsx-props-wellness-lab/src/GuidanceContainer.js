@@ -15,28 +15,17 @@ export default class GuidanceContainer extends React.Component {
                             <td>Image</td>
                             <td>Description</td>
                             <td>Stars</td>
+                            <td>Priority?</td>
                         </tr>
                     </thead>
                     <tbody>
-                        {/** TODO:  Render GuidanceItems here
-                                    Check the GuidanceItem component for the expect props
-                                    BUG CATCHER: There's a bug in GuidanceItem that will make it fail. 
-                                            Can you find it? 
-                                            What warning did you get and how did it help you?
-                        */}
-                        {
-                            wellnessFactors.sort((a,b) => {
-							return b.stars - a.stars
-						}).map(factor => {
-							return <GuidanceItem 
-								title={factor.title}
-								image={factor.image}
-								description={factor.description}
-								stars={factor.stars}
-								isPriority={factor.isPriority ? "Yes" : "No"}
-							/>
-						})
-                        }
+                        { wellnessFactors.sort((a,b) => b.stars - a.stars).map(factor =>
+							<GuidanceItem 
+								key={factor.id}
+                                {...factor} />
+                        )
+			
+                    }
                            
                     </tbody>
                 </table>
