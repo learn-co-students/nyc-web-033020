@@ -1,14 +1,18 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 
-const GuidanceItem = () => {
+const GuidanceItem = props => {
+    const { title, image, description, star } = props;
+
     return (
         <tr>
-            <td>{props.factor.title}</td>
-            <td><img src={props.factor.image} alt={props.factor.title}/></td>
-            <td>{/** TODO: Add the correct prop here */}</td>
-            <td>{/** TODO: Add the correct prop here */}</td>
+            <td>{title}</td>
+            <td><img src={image} alt={title}/></td>
+            <td>{description}</td>
+            <td>{star}</td>
         </tr>
     )
+    
 }
 
 export default GuidanceItem;
