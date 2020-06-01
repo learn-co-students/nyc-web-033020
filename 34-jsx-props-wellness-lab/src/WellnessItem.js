@@ -4,6 +4,7 @@ import { HoldCSSDeck, PieCSSDeck } from './styles';
 
 export default class WellnessItem extends React.Component {
     render(){
+        console.log(this.value)
         const { id, color, title } = this.props
         return (
             <HoldCSSDeck rotate={(id - 1) * 45}>
@@ -14,6 +15,10 @@ export default class WellnessItem extends React.Component {
         )
     }
 }
+
+WellnessItem.defaultProps = {
+    color : 'grey'
+  }
 
 /**
  *  TODO: Add default props to the WellnessItem for color 
