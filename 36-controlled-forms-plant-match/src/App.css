@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+}
+.simple-flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.vertical-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.plant-card {
+  flex-basis: 20%;
+  margin: 2px;
+  padding: 3px;
+  border: solid brown;
+  border-style: double;
+}
+
+.card-img {
+  height: 100px;
+  max-width: 100px;
+  object-fit: contain;
+}
+
+.top {
+  background-color: darkseagreen;
+  height: 50px;
+  color: white;
+  font-size: 1.5em;
+  padding: 0px 5px;
+  justify-content: space-between;
+}
+
+.btn {
+  font-size: .6em;
+}
+
+.active {
+  border-bottom: white solid 2px;
+}
+
+
+.card-back-text {
+  font-size: 0.6em;
+}
+
+input {
+  margin: 5px 0px;
+}
