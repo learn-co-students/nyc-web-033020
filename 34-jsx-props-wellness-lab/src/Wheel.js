@@ -12,7 +12,7 @@ export default class Wheel extends React.Component {
 
         }
     }
-   
+
     render(){
         return (
             <Pie size={300}>
