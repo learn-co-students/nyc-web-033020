@@ -12,6 +12,10 @@ export default class Wheel extends React.Component {
                  *         check the WellnessItem component to see what it's expecting for props
                  *         Hint: Use your ES6 techniques
                  */}
+                wellnessFactors.map = (itemData) => {
+
+                }
+                <WellnessItem props={ wellnessFactors[0] } /> 
             </Pie>
         )
     }
