@@ -4,7 +4,14 @@ import GuidanceItem from './GuidanceItem';
 
 export default class GuidanceContainer extends React.Component {
 
+    
+    
     renderItemInfo = () => {
+
+        let sortedStars = wellnessFactors.sort(function (a, b) {
+            return b.stars - a.stars; 
+          });
+
         return (
             <div>
                 <h3>Wellness Factors Described</h3>
@@ -18,6 +25,17 @@ export default class GuidanceContainer extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
+                        
+                        {sortedStars.map(factor => (
+                            <GuidanceItem 
+                            key={factor.id}
+                            title={factor.title}
+                            image={factor.image}
+                            description={factor.description}
+                            stars={factor.stars}
+                            />
+                            ))}
+                        
                         {/** TODO:  Render GuidanceItems here
                                     Check the GuidanceItem component for the expect props
                                     BUG CATCHER: There's a bug in GuidanceItem that will make it fail. 
