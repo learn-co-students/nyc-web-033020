@@ -8,7 +8,7 @@ export default class Wheel extends React.Component {
     render(){
         return (
             <Pie size={300}>
-                {wellnessFactors.map(item => <WellnessItem id={item.id} color={item.color} title={item.title}/>)}
+                {wellnessFactors.map(item => <WellnessItem key={item.id} id={item.id} color={item.color} title={item.title}/>)}
                 {/** TODO: map over your wellness factors and create a WellnessItem for each. 
                  *         check the WellnessItem component to see what it's expecting for props
                  *         Hint: Use your ES6 techniques
