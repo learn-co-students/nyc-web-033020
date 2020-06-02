@@ -29,8 +29,8 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        {this.renderNav()} {/** The renderNav method renders a div holding the button to get songs and the title */}
-        <MainContainer {this.props.fetchSongs}/> {/** TODO: What props do I need? */}
+        {/** The renderNav method renders a div holding the button to get songs and the title */}
+        <MainContainer  nav={this.renderNav()}/> {/** TODO: What props do I need? */}
       </div>
     );
   }
