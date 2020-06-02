@@ -54,7 +54,7 @@
       "artist": "CIMAFUNK",
       "url": "https://www.youtube.com/embed/o1YBngPfU-o",
       "genre": "Hip Hop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 8,
@@ -134,7 +134,7 @@
       "artist": "Common, John Legend",
       "url": "https://www.youtube.com/embed/HUZOKvYcx_o",
       "genre": "Hip Hop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 18,
@@ -150,7 +150,7 @@
       "artist": "Victoria Monet and Ariana Grande",
       "url": "https://www.youtube.com/embed/TSOzguYgbAM",
       "genre": "Pop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 20,

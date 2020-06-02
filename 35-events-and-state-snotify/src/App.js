@@ -5,14 +5,35 @@ import MainContainer from './components/MainContainer';
 let API_ENDPOINT = `http://localhost:6001/songs`
 
 class App extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      /* TODO: What should go in state here?? Anything we don't want to have to fetch again for instance...? */
-      songList: []
-    }
+  state = {
+    songList: []
+    /* TODO: What should go in state here?? Anything we don't want to have to fetch again for instance...? */
   }
   
+  updateFavorite = (id, favorite) => {
+    // setState and update songs 
+    fetch(`${API_ENDPOINT}/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
+      }, 
+      body: JSON.stringify({ favorite: !favorite })
+    })
+    .then(res => res.json())
+    .then(updatedSong => {
+      // find the old song
+      // find where it was in the array
+      // replace that with the new representation from the backend
+      // set state correctly 
+      let targetSongIndex = this.state.songList.findIndex(song => song.id === updatedSong.id)
+      let updatedSongs = [...this.state.songList]
+      // arrays are pass by reference so we have to make a copy and can use spread operator 
+      updatedSongs[targetSongIndex] = updatedSong
+
+      this.setState({ songList: updatedSongs })
+    })
+  }
 
   fetchSongs = () => {
     fetch(API_ENDPOINT)
@@ -41,7 +62,7 @@ class App extends React.Component {
     return (
       <div className="App">
         {this.renderNav()} {/** The renderNav method renders a div holding the button to get songs and the title */}
-        <MainContainer handleSongs={this.state.songList} /> {/** TODO: What props do I need? */}
+        <MainContainer songs={this.state.songList} updateFavorite={this.updateFavorite} /> {/** TODO: What props do I need? */}
       </div>
     );
   }
