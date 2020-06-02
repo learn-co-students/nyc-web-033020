@@ -5,11 +5,11 @@ import { render } from '@testing-library/react';
 
 const MainContainer = props => {
     
-    console.log(props.songList)
+    // console.log(props.songList)
     return (
         
         <div className="simple-flex-row top">
-            <SongList /> {/** TODO: What props do I need? */}
+            <SongList songList={props.songList}/> {/** TODO: What props do I need? */}
             <Queue /> {/** TODO: What props do I need? */}
         </div>
     )
