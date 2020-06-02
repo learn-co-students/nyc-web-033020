@@ -2,7 +2,9 @@ import React from 'react';
 import Filter from './Filter';
 
 const SongList = props => {
+    
     return (
+        
         <div className="half songlist">
             <h2>Song List</h2>
             <Filter />
