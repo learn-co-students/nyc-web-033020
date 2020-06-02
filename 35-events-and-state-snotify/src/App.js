@@ -6,14 +6,38 @@ let API_ENDPOINT = `http://localhost:6001/songs`
 
 class App extends React.Component {
   state = {
-    /* TODO: What should go in state here?? Anything we don't want to have to fetch again for instance...? */
+    songs: fetch(API_ENDPOINT)
+    // hasBeenClicked: false
   }
+
+  // handleClick = () => {
+  //   this.setState({
+  //     hasBeenClicked: true,
+  //     // this.fetchSongs()
+  //   })
+  // }
   
-  fetchSongs = () => {
-    fetch(API_ENDPOINT)
+  songData = () => {
+    this.state.songs
     .then(resp => resp.json())
-    .then(console.log)
+    .then(data => {
+      data.map(() => (
+        <MainContainer
+        key = {data.id}
+        title = {title.id}
+        />
+
+      ))
+    })
   }
+
+
+
+  // fetchSongs = () => {
+  //   fetch(API_ENDPOINT)
+  //   .then(resp => resp.json())
+  //   .then(console.log)
+  // }
 
 
   renderNav = () => {
@@ -29,8 +53,9 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
+        {this.renderNav}
         {/** The renderNav method renders a div holding the button to get songs and the title */}
-        <MainContainer  nav={this.renderNav()}/> {/** TODO: What props do I need? */}
+        <MainContainer /> {/** TODO: What props do I need? */}
       </div>
     );
   }
