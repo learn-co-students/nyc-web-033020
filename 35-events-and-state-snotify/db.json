@@ -14,7 +14,7 @@
       "artist": "Childish Gambino",
       "url": "https://www.youtube.com/embed/VYOjWnS4cMY",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 3,
@@ -30,7 +30,7 @@
       "artist": "Bruno Mars",
       "url": "https://www.youtube.com/embed/UqyT8IEBkvY",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "artist": "Lizzo",
       "url": "https://www.youtube.com/embed/SmbmeOgWsqE",
       "genre": "Hip Hop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 6,
@@ -46,7 +46,7 @@
       "artist": "Kanye West",
       "url": "https://www.youtube.com/embed/6CHs4x2uqcQ",
       "genre": "Hip Hop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 7,
@@ -54,7 +54,7 @@
       "artist": "CIMAFUNK",
       "url": "https://www.youtube.com/embed/o1YBngPfU-o",
       "genre": "Hip Hop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 8,
@@ -62,7 +62,7 @@
       "artist": "2Pac",
       "url": "https://www.youtube.com/embed/Mb1ZvUDvLDY",
       "genre": "Hip Hop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 9,
@@ -70,7 +70,7 @@
       "artist": "John Legend",
       "url": "https://www.youtube.com/embed/PIh07c_P4hc",
       "genre": "Hip Hop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 10,
@@ -78,7 +78,7 @@
       "artist": "A Tribe Called Quest",
       "url": "https://www.youtube.com/embed/O3pyCGnZzYA",
       "genre": "Hip Hop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 11,
@@ -86,7 +86,7 @@
       "artist": "Common",
       "url": "https://www.youtube.com/embed/OjHX7jf-znA",
       "genre": "Hip Hop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 12,
@@ -94,7 +94,7 @@
       "artist": "Marc Anthony",
       "url": "https://www.youtube.com/embed/YXnjy5YlDwk",
       "genre": "Hip Hop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 13,
@@ -102,7 +102,7 @@
       "artist": "Celia Cruz",
       "url": "https://www.youtube.com/embed/0nBFWzpWXuM",
       "genre": "Salsa",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 14,
@@ -110,7 +110,7 @@
       "artist": "Rhiannon Giddens",
       "url": "https://www.youtube.com/embed/PU3cGLtULeI",
       "genre": "Hip Hop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 15,
@@ -118,7 +118,7 @@
       "artist": "Prince feat. Eryn Allen Kane",
       "url": "https://www.youtube.com/embed/cieZB0Ab7xk",
       "genre": "Hip Hop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 16,
@@ -126,7 +126,7 @@
       "artist": "J. Cole",
       "url": "https://www.youtube.com/embed/T9IsM0RX7cc",
       "genre": "Hip Hop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 17,
@@ -134,7 +134,7 @@
       "artist": "Common, John Legend",
       "url": "https://www.youtube.com/embed/HUZOKvYcx_o",
       "genre": "Hip Hop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 18,
