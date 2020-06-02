@@ -3,6 +3,14 @@ import './App.css';
 import MainContainer from './components/MainContainer';
 
 let API_ENDPOINT = `http://localhost:6001/songs`
+let songs = [ ]
+
+
+const fetchSongs = () => {
+fetch(API_ENDPOINT).then(res => res.json()).then(res => songs = res)
+}
+
+console.log(songs)
 
 class App extends React.Component {
   state = {
@@ -12,7 +20,9 @@ class App extends React.Component {
   renderNav = () => {
     return (
       <div className="simple-flex-row">
-        <button onClick={null /* TODO: Put your method to fetch the songs */}>Get Songs</button> 
+        <button onClick={
+          fetchSongs()
+        }>Get Songs</button> 
         <h1>S-not-ify 🐽</h1>
         <input placeholder="Search by title or artist..."/>
       </div>
