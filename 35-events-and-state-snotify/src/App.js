@@ -37,7 +37,7 @@ class App extends React.Component {
       <div className="App">
         {this.renderNav()} {/** The renderNav method renders a div holding the button to get songs and the title */}
         
-         <MainContainer songs ={this.state.songs} /> 
+        <MainContainer songs ={this.state.songs} /> 
       </div>
     );
   }
