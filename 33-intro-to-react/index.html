@@ -11,10 +11,49 @@
     <div id="root"></div>
 
     <script type="text/babel">  
+    //style={{backgroundColor: 'blue'}}
+
+    const createCard = (title, subtitle) => {
+      return (
+        <div className="greeting-card">
+          <h1>{title}</h1>
+          <h3>{subtitle}</h3>
+        </div>
+      )
+    }
+
+    const Card = props => {
+      // when would we use this.props.value 
+      // this.props ==> class notation for components 
+      const { title, subtitle, stars, excited, nums } = props;
+
+      console.log(props)
+      return (
+        <div className="greeting-card">
+          <h1>{title}</h1>
+          <h3>{subtitle} { excited ? "!!!!!!!!!"  : '' }</h3>
+         { nums ?  props.nums.map(num => <div key={num}>{num}</div> ) : <div> NO NUMS </div> }
+        </div>
+      )
+    }
+
+    // es6 stuff yall need to KNOW
+    // ARROW FUNCS AND IMPLICIT V EXPLICIT RETURNS
+
+    // (n) => n + 5 // implicit return w/o curlyBois 
+    // (n) => { return n + 5 } // explit return once you have curlyBois
+
+    // DESTRUCTURING 
+    // TERNARY OPERATOR 
+
+    // ReactDOM.render(whatToShow, whereToShowIt)
     ReactDOM.render(
       <div>
-        <h1>Hello, World!</h1>
-        <h3>Welcome to React</h3>
+        { createCard('Hello, World!', 'Welcome to React') }
+        <Card title="Hola, Mundo!" subtitle="Bienvenido a React" nums={[1,4,47]}/>
+        <Card title="bonjour, tout le monde" subtitle="bienvenue dans react" excited={true}/>
+        <Card title="Hallo, Welt" subtitle="Willkommen bei dem React" excited={false}/>
+        <Card title="שלום עולם" excited={true}/> 
       </div>
       , 
       document.getElementById('root'))
