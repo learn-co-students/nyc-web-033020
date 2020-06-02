@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { Component, Fragment} from 'react';
 import './App.css';
-import Wheel from './Wheel.js'
+// import { Wheel, getFetch } from './Wheel'; // this is named import syntax 
+import Wheel from './Wheel'
+import GuidanceContainer from './GuidanceContainer';
 
 function App() {
 
+  const renderComponentsWithLine = () => {
+    return (
+      <Fragment>
+        <Wheel />
+        <hr />
+        <GuidanceContainer />
+      </Fragment>
+    )
+  }
   return (
     <div className="App">
       <h1> Welcome to the Wellness Center</h1>
-      <Wheel />
-      {/** TODO: Import and render the Wheel component, provided for you. It does not need any props. */}
-      <hr />
-      {/** TODO: Import and render the GuidanceContainer component, provided for you. It does not need any props. */}
+      { renderComponentsWithLine() }
     </div>
   );
 }

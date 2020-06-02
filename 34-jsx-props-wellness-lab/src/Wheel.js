@@ -1,5 +1,5 @@
 import React from 'react';
-import { wellnessFactors } from './data';
+import { wellnessFactors } from './data'; // aliases
 import WellnessItem from './WellnessItem';
 import { Pie } from './styles';
 
@@ -17,3 +17,5 @@ export default class Wheel extends React.Component {
         )
     }
 }
+
+// export const getFetch = () => fetch('localhost:3000/songs').then(res => res.json())
