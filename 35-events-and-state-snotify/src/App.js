@@ -8,11 +8,17 @@ class App extends React.Component {
   state = {
     /* TODO: What should go in state here?? Anything we don't want to have to fetch again for instance...? */
   }
+
+  async fetchSong() {
+    const resp = await fetch(API_ENDPOINT)
+    const data = await resp.json()
+    console.log(data)
+  }
   
   renderNav = () => {
     return (
       <div className="simple-flex-row">
-        <button onClick={null /* TODO: Put your method to fetch the songs */}>Get Songs</button> 
+        <button onClick={this.fetchSong /* TODO: Put your method to fetch the songs */}>Get Songs</button> 
         <h1>S-not-ify 🐽</h1>
         <input placeholder="Search by title or artist..."/>
       </div>
