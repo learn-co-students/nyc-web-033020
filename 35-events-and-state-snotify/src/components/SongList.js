@@ -1,6 +1,10 @@
 import React from 'react';
 import Filter from './Filter';
 
+renderSong = (data) => {
+    data.map(song => {<SongList title={song.title} artist={song.artist}/>})
+}
+
 const SongList = props => {
     return (
         <div className="half songlist">
@@ -18,7 +22,9 @@ const SongList = props => {
                         </tr>
                     </thead>
                     <tbody>
-                        {/** TODO: Render a SongItem component per each song here*/}
+                        {/** TODO: Render a SongItem component per each song here*/
+                        SongList.map
+                        }
                     </tbody>
             </table>
         </div>
