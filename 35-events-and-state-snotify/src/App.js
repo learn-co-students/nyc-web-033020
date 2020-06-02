@@ -36,8 +36,8 @@ class App extends React.Component {
     return (
       <div className="App">
         {this.renderNav()} {/** The renderNav method renders a div holding the button to get songs and the title */}
-        {this.state.songs.map(song=>
-        <MainContainer {...song} /> )}
+        
+         <MainContainer songs ={this.state.songs} /> 
       </div>
     );
   }
