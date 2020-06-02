@@ -1,7 +1,10 @@
 import React from 'react';
 
+
 const Queue = props => {
-    let currentSong = null // TODO: how do you figure out what the current song is? 
+    console.log(props)
+    let currentSong = null
+
     
     return (
         <div className="half queue">

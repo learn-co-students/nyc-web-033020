@@ -19,10 +19,12 @@ const SongList = props => {
                         </tr>
                     </thead>
                     <tbody>
-                        {/** TODO: Render a SongItem component per each song here*/}
                         {props.songs.map(song=> <SongItem
                         key={song.id}
-                        {...song}/>)}
+                        {...song}
+                        updateFav={props.updateFav}
+                        />)}
+
                     </tbody>
             </table>
         </div>

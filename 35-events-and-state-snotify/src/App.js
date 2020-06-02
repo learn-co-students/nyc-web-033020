@@ -3,7 +3,8 @@ import './App.css';
 import MainContainer from './components/MainContainer';
 
 let API_ENDPOINT = `http://localhost:6001/songs`
-
+let requestHeaders = {accept:"application/json",
+               "Content-Type": "application/json"}
 class App extends React.Component {
 
 
@@ -11,6 +12,7 @@ class App extends React.Component {
     /* TODO: What should go in state here?? Anything we don't want to have to fetch again for instance...? */
   songs:[] 
   }
+  
   
   newSongs = () => {
     fetch(API_ENDPOINT)
@@ -20,6 +22,26 @@ class App extends React.Component {
       songs: result
       })
     })
+  }
+
+  updateFav = (id, favorite) =>{
+    fetch(`${API_ENDPOINT}/${id}`,{
+      method: "PATCH",
+      headers: requestHeaders,
+      body: JSON.stringify({ favorite: !favorite })
+    })
+    .then(r => r.json())
+    .then(updatedSong => {
+      let targetSongIndex = this.state.songs.findIndex(song => song.id === updatedSong.id)
+      let updatedSongs = [...this.state.songs]
+      updatedSongs[targetSongIndex] = updatedSong
+
+      this.setState({
+        songs: updatedSongs
+      })
+    }
+     
+      )
   }
   renderNav = () => {
     return (
@@ -36,7 +58,7 @@ class App extends React.Component {
       <div className="App">
         {this.renderNav()} {/** The renderNav method renders a div holding the button to get songs and the title */}
         
-        <MainContainer songs ={this.state.songs} /> 
+        <MainContainer songs ={this.state.songs} updateFav={this.updateFav} /> 
       </div>
     );
   }
