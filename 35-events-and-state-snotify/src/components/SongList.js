@@ -1,5 +1,6 @@
 import React from 'react';
 import Filter from './Filter';
+import SongItem from './SongItem';
 
 const SongList = props => {
     return (
@@ -18,6 +19,7 @@ const SongList = props => {
                         </tr>
                     </thead>
                     <tbody>
+                        {props.songs.map(song => <SongItem key={song.id} {...song} onFavoriteChange={() => props.onFavoriteChange(song)}/>)}
                         {/** TODO: Render a SongItem component per each song here*/}
                     </tbody>
             </table>
