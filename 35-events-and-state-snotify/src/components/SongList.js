@@ -3,7 +3,6 @@ import Filter from './Filter';
 import SongItem from'./SongItem';
 
 const SongList = props => {
-    console.log(props)
     return (
         <div className="half songlist">
             <h2>Song List</h2>

@@ -12,9 +12,8 @@ class App extends React.Component {
   songs:[] 
   }
   
-  newSongs = (event) => {
-    event.persist()
-    fetch('http://localhost:6001/songs')
+  newSongs = () => {
+    fetch(API_ENDPOINT)
     .then(r=>r.json())
     .then((result)=>{
       this.setState({
