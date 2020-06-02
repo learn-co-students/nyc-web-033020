@@ -7,12 +7,27 @@ let API_ENDPOINT = `http://localhost:6001/songs`
 class App extends React.Component {
   state = {
     /* TODO: What should go in state here?? Anything we don't want to have to fetch again for instance...? */
+    songs: fetch(API_ENDPOINT)
   }
+
+  songsData = () => this.state.songs.then(res => res.json()).then(data => {
+    data.map(() => {
+      <MainContainer 
+        key={data.id}
+        title={data.title}
+        artist={data.artist}
+        url={data.url}
+        genre={data.genre}
+        favorite={data.favorite}
+      />
+    })
+  })
   
   renderNav = () => {
     return (
       <div className="simple-flex-row">
-        <button onClick={null /* TODO: Put your method to fetch the songs */}>Get Songs</button> 
+        {/*  TODO: Put your method to fetch the songs */}
+        <button onClick={this.songsData}>Get Songs</button> 
         <h1>S-not-ify 🐽</h1>
         <input placeholder="Search by title or artist..."/>
       </div>
