@@ -12,7 +12,8 @@ class App extends React.Component {
   songs:[] 
   }
   
-  newSongs = () => {
+  newSongs = (event) => {
+    event.persist()
     fetch('http://localhost:6001/songs')
     .then(r=>r.json())
     .then((result)=>{
@@ -22,7 +23,6 @@ class App extends React.Component {
     })
   }
   renderNav = () => {
-    console.log(this.state)
     return (
       <div className="simple-flex-row">
         <button onClick={this.newSongs}>Get Songs</button> 
@@ -36,7 +36,8 @@ class App extends React.Component {
     return (
       <div className="App">
         {this.renderNav()} {/** The renderNav method renders a div holding the button to get songs and the title */}
-        <MainContainer /> {/** TODO: What props do I need? */}
+        {this.state.songs.map(song=>
+        <MainContainer {...song} /> )}
       </div>
     );
   }

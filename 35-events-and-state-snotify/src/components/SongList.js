@@ -2,6 +2,8 @@ import React from 'react';
 import Filter from './Filter';
 
 const SongList = props => {
+    // const {title,artists,play,queue,favorite,like} = props
+    // console.log(this.props)
     return (
         <div className="half songlist">
             <h2>Song List</h2>
