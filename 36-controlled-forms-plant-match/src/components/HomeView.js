@@ -7,6 +7,7 @@ const API_BASE = 'http://localhost:3001/plants'
 class HomeView extends React.Component {
     state = {
         plants: [],
+        searchTerm: '',
         showCreateForm: false,
     }
 
@@ -21,6 +22,10 @@ class HomeView extends React.Component {
 
     toggleCreateForm = () => this.setState({ showCreateForm: !this.state.showCreateForm })
 
+    handleChange = event => this.setState({ searchTerm: event.target.value })
+
+    addNewPlant = (newPlant) => this.setState({ plants: [...this.state.plants, newPlant]})
+
 
     /**
      * TODO: ONLY FOR ADVANCED DELIVERABLES
@@ -32,16 +37,18 @@ class HomeView extends React.Component {
         const { plants, showCreateForm } = this.state
         // TODO: In order to search, what state, methods and element attributes are needed? 
         // In order to render the correct plants, what calculations do you need to do and what props do you need to change below?
-
+        
+        const filteredPlants = this.state.plants.filter(plant => plant.Common_Name.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
+        console.log(filteredPlants)
         return (
             <div>
                 <button onClick={this.toggleCreateForm}>{showCreateForm ? "Hide Form" : "Submit Plant"}</button>
-                { showCreateForm && <CreatePlantForm />}
+                { showCreateForm && <CreatePlantForm addNewPlant={this.addNewPlant} />}
                 <hr />
                 <div>
-                    <input placeholder="Search for Plants"/>
+                    <input value={this.state.searchTerm} onChange={this.handleChange} placeholder="Search for Plants"/>
                 </div>
-                <MatchContainer plants={plants}/>
+                <MatchContainer plants={filteredPlants}/>
             </div>
         )
     }

@@ -10,6 +10,10 @@ class App extends React.Component {
     username: null // TODO: replace null with 'ChromeBoi' or your name to see the greeting
   }
 
+  changeUsername = (username) => {
+    this.setState({ username })
+  }
+
   changeView = (view) => {
     this.setState({ view })
   }
@@ -18,9 +22,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-       <Navbar changeView={this.changeView} view={this.state.view} username={this.state.username} />
-       {this.state.view === 'login' && <Login changeView={this.changeView}/>}
-       {this.state.view === 'home' && <HomeView />}
+        <Navbar changeView={this.changeView} view={this.state.view} username={this.state.username} />
+        {this.state.view === 'login' && <Login changeView={this.changeView} changeUsername={this.changeUsername}/>}
+        {this.state.view === 'home' && <HomeView />}
       </div>
     );
   }

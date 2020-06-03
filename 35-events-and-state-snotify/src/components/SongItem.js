@@ -32,7 +32,7 @@ class SongItem extends React.Component {
     render(){
         // console.log(this.props)
         // access id and favorites?
-        console.log(this.props.id, this.props.favorite)
+        // console.log(this.props.id, this.props.favorite)
         return (
             <tr>
                 <td>{this.props.title}</td>

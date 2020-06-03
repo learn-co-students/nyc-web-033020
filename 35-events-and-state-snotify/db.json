@@ -22,7 +22,7 @@
       "artist": "2Pac ft Talent",
       "url": "https://www.youtube.com/embed/eXvBjCO19QY",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 4,
@@ -38,7 +38,7 @@
       "artist": "Lizzo",
       "url": "https://www.youtube.com/embed/SmbmeOgWsqE",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 6,
@@ -46,7 +46,7 @@
       "artist": "Kanye West",
       "url": "https://www.youtube.com/embed/6CHs4x2uqcQ",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 7,
@@ -54,7 +54,7 @@
       "artist": "CIMAFUNK",
       "url": "https://www.youtube.com/embed/o1YBngPfU-o",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 8,
@@ -78,7 +78,7 @@
       "artist": "A Tribe Called Quest",
       "url": "https://www.youtube.com/embed/O3pyCGnZzYA",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 11,
@@ -86,7 +86,7 @@
       "artist": "Common",
       "url": "https://www.youtube.com/embed/OjHX7jf-znA",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 12,
@@ -102,7 +102,7 @@
       "artist": "Celia Cruz",
       "url": "https://www.youtube.com/embed/0nBFWzpWXuM",
       "genre": "Salsa",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 14,
@@ -126,7 +126,7 @@
       "artist": "J. Cole",
       "url": "https://www.youtube.com/embed/T9IsM0RX7cc",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 17,

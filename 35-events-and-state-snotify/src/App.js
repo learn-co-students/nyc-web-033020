@@ -66,7 +66,7 @@ class App extends React.Component {
   }
 
   render(){
-    console.log('inside of render, state songs', this.state.songs)
+    // console.log('inside of render, state songs', this.state.songs)
     return (
       <div className="App">
         {this.renderNav()} {/** The renderNav method renders a div holding the button to get songs and the title */}
