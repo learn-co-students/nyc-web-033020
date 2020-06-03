@@ -25,6 +25,10 @@ class HomeView extends React.Component {
 
     filterPlants = (plants) => plants.filter(plant => plant['Common_Name'].toLowerCase().includes(this.state.search))
 
+    addPlant = (plant) => this.setState(prevState => {
+        return {plants: this.state.plants.concat(plant)}
+    })
+
     /**
      * TODO: ONLY FOR ADVANCED DELIVERABLES
      * Once you post a new plant, you'll need to update the plants on state here.
@@ -39,7 +43,7 @@ class HomeView extends React.Component {
         return (
             <div>
                 <button onClick={this.toggleCreateForm}>{showCreateForm ? "Hide Form" : "Submit Plant"}</button>
-                { showCreateForm && <CreatePlantForm />}
+                { showCreateForm && <CreatePlantForm addPlant={this.addPlant} />}
                 <hr />
                 <div>
                     <input placeholder="Search for Plants" onChange={(event) => this.setState({search: event.target.value})}/>

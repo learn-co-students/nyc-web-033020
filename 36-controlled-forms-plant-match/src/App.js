@@ -19,7 +19,7 @@ class App extends React.Component {
     return (
       <div className="App">
        <Navbar changeView={this.changeView} view={this.state.view} username={this.state.username} />
-       {this.state.view === 'login' && <Login changeView={this.changeView}/>}
+       {this.state.view === 'login' && <Login changeView={this.changeView} changeUsername={username => this.setState({username: username})}/>}
        {this.state.view === 'home' && <HomeView />}
       </div>
     );
