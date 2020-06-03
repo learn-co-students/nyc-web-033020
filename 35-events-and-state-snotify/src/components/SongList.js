@@ -23,6 +23,7 @@ const SongList = props => {
                         key={song.id}
                         {...song}
                         updateFav={props.updateFav}
+                        renderUrl={props.renderUrl}
                         />)}
 
                     </tbody>

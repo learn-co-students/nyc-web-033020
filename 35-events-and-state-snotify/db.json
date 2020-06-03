@@ -6,7 +6,7 @@
       "artist": "Beyonce",
       "url": "https://www.youtube.com/embed/WDZJPJV__bQ",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 2,
@@ -78,7 +78,7 @@
       "artist": "A Tribe Called Quest",
       "url": "https://www.youtube.com/embed/O3pyCGnZzYA",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 11,
@@ -86,7 +86,7 @@
       "artist": "Common",
       "url": "https://www.youtube.com/embed/OjHX7jf-znA",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 12,
@@ -102,7 +102,7 @@
       "artist": "Celia Cruz",
       "url": "https://www.youtube.com/embed/0nBFWzpWXuM",
       "genre": "Salsa",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 14,
@@ -110,7 +110,7 @@
       "artist": "Rhiannon Giddens",
       "url": "https://www.youtube.com/embed/PU3cGLtULeI",
       "genre": "Hip Hop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 15,

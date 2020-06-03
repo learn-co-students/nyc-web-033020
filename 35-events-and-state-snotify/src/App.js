@@ -6,11 +6,9 @@ let API_ENDPOINT = `http://localhost:6001/songs`
 let requestHeaders = {accept:"application/json",
                "Content-Type": "application/json"}
 class App extends React.Component {
-
-
   state = {
-    /* TODO: What should go in state here?? Anything we don't want to have to fetch again for instance...? */
-  songs:[] 
+  songs:[], 
+  currentSong:null
   }
   
   
@@ -40,8 +38,11 @@ class App extends React.Component {
         songs: updatedSongs
       })
     }
-     
       )
+  }
+
+  renderUrl = (song) => {
+      this.setState({currentSong:song})
   }
   renderNav = () => {
     return (
@@ -58,7 +59,7 @@ class App extends React.Component {
       <div className="App">
         {this.renderNav()} {/** The renderNav method renders a div holding the button to get songs and the title */}
         
-        <MainContainer songs ={this.state.songs} updateFav={this.updateFav} /> 
+        <MainContainer songs ={this.state.songs} updateFav={this.updateFav} currentSong = {this.state.currentSong} renderUrl={this.renderUrl}/> 
       </div>
     );
   }
