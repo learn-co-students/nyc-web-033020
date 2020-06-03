@@ -14,12 +14,15 @@ class App extends React.Component {
     this.setState({ view })
   }
 
+  changeUsername = username => {
+    this.setState({username})
+  }
 
   render() {
     return (
       <div className="App">
        <Navbar changeView={this.changeView} view={this.state.view} username={this.state.username} />
-       {this.state.view === 'login' && <Login changeView={this.changeView}/>}
+       {this.state.view === 'login' && <Login changeView={this.changeView} changeUsername={this.changeUsername} />}
        {this.state.view === 'home' && <HomeView />}
       </div>
     );

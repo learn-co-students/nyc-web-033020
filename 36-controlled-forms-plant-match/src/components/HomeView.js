@@ -8,6 +8,13 @@ class HomeView extends React.Component {
     state = {
         plants: [],
         showCreateForm: false,
+        search: ''
+    }
+
+    handleSearch = e => {
+        this.setState({
+            search: e.target.value
+        })
     }
 
     /** DO NOT WORRY ABOUT THIS COMPONENTDIDMOUNT METHOD
@@ -29,6 +36,10 @@ class HomeView extends React.Component {
      */
 
     render(){
+        // console.log(this.state)
+
+        let filteredPlants = this.state.plants.filter( plant => plant.Common_Name.toLowerCase().includes(this.state.search.toLowerCase()))
+
         const { plants, showCreateForm } = this.state
         // TODO: In order to search, what state, methods and element attributes are needed? 
         // In order to render the correct plants, what calculations do you need to do and what props do you need to change below?
@@ -39,9 +50,9 @@ class HomeView extends React.Component {
                 { showCreateForm && <CreatePlantForm />}
                 <hr />
                 <div>
-                    <input placeholder="Search for Plants"/>
+                    <input name="search" value={this.state.search} onChange={this.handleSearch} placeholder="Search for Plants"/>
                 </div>
-                <MatchContainer plants={plants}/>
+                <MatchContainer plants={filteredPlants}/>
             </div>
         )
     }
