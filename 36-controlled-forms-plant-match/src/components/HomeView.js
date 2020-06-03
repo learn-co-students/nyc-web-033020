@@ -28,6 +28,11 @@ class HomeView extends React.Component {
 
     toggleCreateForm = () => this.setState({ showCreateForm: !this.state.showCreateForm })
 
+    addPlant = () => {
+        fetch(API_BASE)
+            .then(res => res.json())
+            .then(plants => this.setState({ plants }))
+    }
 
     /**
      * TODO: ONLY FOR ADVANCED DELIVERABLES
@@ -47,7 +52,7 @@ class HomeView extends React.Component {
         return (
             <div>
                 <button onClick={this.toggleCreateForm}>{showCreateForm ? "Hide Form" : "Submit Plant"}</button>
-                { showCreateForm && <CreatePlantForm />}
+                { showCreateForm && <CreatePlantForm plants={this.addPlant} />}
                 <hr />
                 <div>
                     <input name="search" value={this.state.search} onChange={this.handleSearch} placeholder="Search for Plants"/>
