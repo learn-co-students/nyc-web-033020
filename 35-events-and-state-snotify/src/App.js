@@ -7,7 +7,9 @@ let API_ENDPOINT = `http://localhost:6001/songs`
 class App extends React.Component {
   state = {
     /* TODO: What should go in state here?? Anything we don't want to have to fetch again for instance...? */
-    songs:[]
+    songs:[],
+    queuedSongs:[],
+    currentSong:''
   }
   
   getSongs = () => {
@@ -41,9 +43,40 @@ favSong = (key,newFav) => {
     
     })
 
+  //   .then(res => res.json())
+  //   .then(updatedSong => {
+  //     console.log(updatedSong)
+  //     // find the old song
+  //     // find where it was in the array
+  //     // replace that with the new representation from the backend
+  //     // set state correctly 
+  //     let targetSongIndex = this.state.songs.findIndex(song => song.id === updatedSong.id)
+  //     let updatedSongs = [...this.state.songs]
+  //     // arrays are pass by reference so we have to make a copy and can use spread operator 
+  //     updatedSongs[targetSongIndex] = updatedSong
+
+  //     this.setState({ songs: updatedSongs })
+
+
+  //     // update the state of songs 
+  //     // which will force a rerender
+  //     // and update what the user sees 
+  //   })
+  // }
+
     this.setState({songs: newSongs})
 
   })
+}
+
+queueSong = (title, artist) => {
+  const oldSongs = this.state.queuedSongs
+  const newSongs = [...oldSongs, `${title} by ${artist}`]
+  this.setState({queuedSongs: newSongs})
+}
+
+playSong = (data) => {
+this.setState({currentSong: data})
 }
 
 
@@ -66,7 +99,14 @@ favSong = (key,newFav) => {
     return (
       <div className="App">
         {this.renderNav()} {/** The renderNav method renders a div holding the button to get songs and the title */}
-        <MainContainer faved={this.favSong} songs={this.state.songs}  /> {/** TODO: What props do I need? */}
+        <MainContainer 
+        faved={this.favSong} 
+        songs={this.state.songs} 
+        queueSong={this.queueSong} 
+        queuedSongs={this.state.queuedSongs}  
+        playSong={this.playSong}
+        currentSong={this.state.currentSong}
+        /> {/** TODO: What props do I need? */}
       </div>
     );
   }

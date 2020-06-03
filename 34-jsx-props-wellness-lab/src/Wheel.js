@@ -14,7 +14,8 @@ export default class Wheel extends React.Component {
                  */}
                  {wellnessFactors.map(factor => 
                     <WellnessItem key={factor.id} id={factor.id} color={factor.color} title={factor.title}/>
-                    )}
+                    )} 
+                    {/*  key={factor.id} {...factor} can also use spread operator to pass all factor props  */}
             </Pie>
         )
     }

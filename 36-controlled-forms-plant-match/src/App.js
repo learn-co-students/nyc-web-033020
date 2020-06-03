@@ -7,19 +7,23 @@ import HomeView from './components/HomeView';
 class App extends React.Component {
   state = {
     view: 'home',
-    username: null // TODO: replace null with 'ChromeBoi' or your name to see the greeting
+    username: 'Guest' // TODO: replace null with 'ChromeBoi' or your name to see the greeting
   }
 
   changeView = (view) => {
     this.setState({ view })
   }
 
+  changeName = (name) => {
+    this.setState({username: name })
+  }
+
 
   render() {
     return (
       <div className="App">
-       <Navbar changeView={this.changeView} view={this.state.view} username={this.state.username} />
-       {this.state.view === 'login' && <Login changeView={this.changeView}/>}
+       <Navbar changeView={this.changeView} view={this.state.view} username={this.state.username}  />
+       {this.state.view === 'login' && <Login changeView={this.changeView} changeName={this.changeName}/>}
        {this.state.view === 'home' && <HomeView />}
       </div>
     );

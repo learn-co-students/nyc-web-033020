@@ -22,6 +22,7 @@ export default class GuidanceContainer extends React.Component {
                             <td>Image</td>
                             <td>Description</td>
                             <td>Stars</td>
+                            <td>Priority?</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -29,10 +30,7 @@ export default class GuidanceContainer extends React.Component {
                         {sortedStars.map(factor => (
                             <GuidanceItem 
                             key={factor.id}
-                            title={factor.title}
-                            image={factor.image}
-                            description={factor.description}
-                            stars={factor.stars}
+                            {...factor}
                             />
                             ))}
                         

@@ -8,6 +8,7 @@ const GuidanceItem = (props) => {
             <td><img src={props.image} alt={props.title}/></td>
             <td>{props.description}</td>
             <td>{'⭐️'.repeat(props.stars)}</td>
+            <td>{props.isPriority? "Yes":"No"}</td>
         </tr>
     )
 }

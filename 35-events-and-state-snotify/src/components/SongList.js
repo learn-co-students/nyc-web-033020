@@ -23,7 +23,9 @@ const SongList = props => {
                         {/** TODO: Render a SongItem component per each song here*/}
                         {props.songs.map(song => 
                         <SongItem 
-                        key={song.id}
+                        playSong={props.playSong}
+                        queueSong={props.queueSong}
+                        key={song.id} // why doesnt it recognize key 
                         faved={props.faved}
                         {...song}
                         />)}

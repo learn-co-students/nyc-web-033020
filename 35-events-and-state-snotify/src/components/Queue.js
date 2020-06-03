@@ -1,7 +1,8 @@
 import React from 'react';
 
+
 const Queue = props => {
-    let currentSong = null // TODO: how do you figure out what the current song is? 
+    let currentSong = props.currentSong // TODO: how do you figure out what the current song is? 
     
     return (
         <div className="half queue">
@@ -15,11 +16,12 @@ const Queue = props => {
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" >
             </iframe>}
             <ol>
-                <li>Empty Sample LI</li>
                 {/**
                  * TODO: Render all the songs in your queue here!
                  * 
-                 */}
+                 */props.queuedSongs.map(song => 
+                    <li>{song}</li>
+                 )}
             </ol>
         </div>
     )
