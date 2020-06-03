@@ -8,6 +8,7 @@ class HomeView extends React.Component {
     state = {
         plants: [],
         showCreateForm: false,
+        search: ""
     }
 
     /** DO NOT WORRY ABOUT THIS COMPONENTDIDMOUNT METHOD
@@ -21,6 +22,8 @@ class HomeView extends React.Component {
 
     toggleCreateForm = () => this.setState({ showCreateForm: !this.state.showCreateForm })
 
+
+    filterPlants = (plants) => plants.filter(plant => plant['Common_Name'].toLowerCase().includes(this.state.search))
 
     /**
      * TODO: ONLY FOR ADVANCED DELIVERABLES
@@ -39,9 +42,9 @@ class HomeView extends React.Component {
                 { showCreateForm && <CreatePlantForm />}
                 <hr />
                 <div>
-                    <input placeholder="Search for Plants"/>
+                    <input placeholder="Search for Plants" onChange={(event) => this.setState({search: event.target.value})}/>
                 </div>
-                <MatchContainer plants={plants}/>
+                <MatchContainer plants={this.filterPlants(this.state.plants)}/>
             </div>
         )
     }
