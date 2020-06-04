@@ -7,7 +7,7 @@ import HomeView from './components/HomeView';
 class App extends React.Component {
   state = {
     view: 'home',
-    username: null // TODO: replace null with 'ChromeBoi' or your name to see the greeting
+    username: ''
   }
 
   changeView = (view) => {
