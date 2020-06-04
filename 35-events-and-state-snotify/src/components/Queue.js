@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Queue = props => {
-
     return (
         <div className="half queue">
             <h2>Queue</h2>

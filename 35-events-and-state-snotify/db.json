@@ -14,7 +14,7 @@
       "artist": "Childish Gambino",
       "url": "https://www.youtube.com/embed/VYOjWnS4cMY",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "artist": "2Pac ft Talent",
       "url": "https://www.youtube.com/embed/eXvBjCO19QY",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "artist": "Bruno Mars",
       "url": "https://www.youtube.com/embed/UqyT8IEBkvY",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 5,
@@ -61,7 +61,7 @@
       "title": "Dear Mama",
       "artist": "2Pac",
       "url": "https://www.youtube.com/embed/Mb1ZvUDvLDY",
-      "genre": "Hip Hop",
+      "genre": "Pop",
       "favorite": true
     },
     {
@@ -69,7 +69,7 @@
       "title": "Ordinary People",
       "artist": "John Legend",
       "url": "https://www.youtube.com/embed/PIh07c_P4hc",
-      "genre": "Hip Hop",
+      "genre": "Pop",
       "favorite": true
     },
     {
@@ -77,7 +77,7 @@
       "title": "Can I Kick It? ",
       "artist": "A Tribe Called Quest",
       "url": "https://www.youtube.com/embed/O3pyCGnZzYA",
-      "genre": "Hip Hop",
+      "genre": "Pop",
       "favorite": false
     },
     {

@@ -7,7 +7,7 @@ const MainContainer = props => {
     return (
         <div className="simple-flex-row top">
             <SongList songs = {props.songs} updateFav={props.updateFav} renderUrl={props.renderUrl}/> 
-            <Queue song={props.currentSong}/> 
+            <Queue currentSong={props.currentSong}/> 
         </div>
     )
 }
