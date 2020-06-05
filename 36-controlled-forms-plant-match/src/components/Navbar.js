@@ -5,10 +5,10 @@ const Navbar = props => {
     return (
         <div className="simple-flex-row top">
             {username 
-            ? <div onClick={() => changeView('home')}> Welcome to Plant 🌱 Match, {username} </div>
-            :  <div onClick={() => changeView('home')}> Plant 🌱 Match </div>
+            ? <span onClick={() => changeView('home')}> Welcome to Plant 🌱 Match, {username} </span>
+            :  <span onClick={() => changeView('home')}> Plant 🌱 Match </span>
             }
-            <div className={view === 'login' ? 'btn active' : 'btn inactive'} onClick={() => changeView('login')}>Login</div>
+            <span className={view === 'login' ? 'btn active' : 'btn inactive'} onClick={() => changeView('login')}>Login</span>
         </div>
     )
 }

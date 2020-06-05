@@ -8,6 +8,7 @@ class HomeView extends React.Component {
     state = {
         plants: [],
         showCreateForm: false,
+        search: '' 
     }
 
     /** DO NOT WORRY ABOUT THIS COMPONENTDIDMOUNT METHOD
@@ -22,6 +23,7 @@ class HomeView extends React.Component {
     toggleCreateForm = () => this.setState({ showCreateForm: !this.state.showCreateForm })
 
 
+    handleSearch = event => this.setState({search: event.target.value})
     /**
      * TODO: ONLY FOR ADVANCED DELIVERABLES
      * Once you post a new plant, you'll need to update the plants on state here.
@@ -32,16 +34,17 @@ class HomeView extends React.Component {
         const { plants, showCreateForm } = this.state
         // TODO: In order to search, what state, methods and element attributes are needed? 
         // In order to render the correct plants, what calculations do you need to do and what props do you need to change below?
-
+        console.log( this.state )
+        let filteredPlants = this.state.plants.filter(plant => plant.Common_Name.toLowerCase().includes(this.state.search.toLowerCase()))
         return (
             <div>
                 <button onClick={this.toggleCreateForm}>{showCreateForm ? "Hide Form" : "Submit Plant"}</button>
                 { showCreateForm && <CreatePlantForm />}
                 <hr />
                 <div>
-                    <input placeholder="Search for Plants"/>
+                    <input onChange={this.handleSearch} value={this.state.search} placeholder="Search for Plants"/>
                 </div>
-                <MatchContainer plants={plants}/>
+                <MatchContainer plants={filteredPlants}/>
             </div>
         )
     }
