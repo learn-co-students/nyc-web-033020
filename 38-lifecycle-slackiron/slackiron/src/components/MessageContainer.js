@@ -11,14 +11,26 @@ class MessageContainer extends React.Component {
     }
 
     renderChannelInfo = () => {
+        let { channelInfo, selectedChannel } = this.props;
         return (
-            false  // TODO: what should the condition be here? why do we need a condition at all?
-                ? <div>ADD CHANNEL INFO HERE</div>
+            selectedChannel  // TODO: what should the condition be here? why do we need a condition at all?
+                ? <div>{channelInfo.name}{channelInfo.starred ? '✨' : null}</div>
                 : <div>Please select a channel</div>
         )
     }
 
+    componentDidUpdate(prevProps){
+        if(prevProps.selectedChannel !== this.props.selectedChannel){
+            fetchChannelMessages(this.props.selectedChannel)
+                .then(messages => {
+                    console.log('messages:', messages)
+                    this.setState({ messages })
+                })
+        }
+    }
+
     render(){
+        console.log('message container', this.props.selectedChannel)
         return (
             <div className="messages container">
                 <h2>Messages</h2>

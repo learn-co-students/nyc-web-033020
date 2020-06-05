@@ -9,15 +9,17 @@ const ChannelsContainer = props => {
             <div 
                 className={selectedChannel === id ? 'active channel' : 'channel'}
                 key={id} 
-                onClick={() => props.selectChannel(id)}>
+                onClick={() => selectChannel(id)}>
                     # {name}
             </div>
         )
     }
+
     return (
         <div className="channels container">
             <h2>Channels</h2>
-            {/** TODO: render all channels here using the helper method above. 
+            { props.channels.map(channel => renderChannelRow(channel))
+            /** TODO: render all channels here using the helper method above. 
              *         ADVANCED: render into starred OR general below
              */}
             <h3>Starred</h3>
