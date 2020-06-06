@@ -8,6 +8,7 @@ class HomeView extends React.Component {
     state = {
         plants: [],
         showCreateForm: false,
+        search : ''
     }
 
     /** DO NOT WORRY ABOUT THIS COMPONENTDIDMOUNT METHOD
@@ -21,7 +22,17 @@ class HomeView extends React.Component {
 
     toggleCreateForm = () => this.setState({ showCreateForm: !this.state.showCreateForm })
 
+    changeHandler = e =>{
+        this.setState({
+            search : e.target.value
+        })
+    }
 
+    addNewPlant = (newPlant) =>{
+        this.setState({
+           plants: [...this.state.plants, newPlant]
+        })
+    }
     /**
      * TODO: ONLY FOR ADVANCED DELIVERABLES
      * Once you post a new plant, you'll need to update the plants on state here.
@@ -30,18 +41,21 @@ class HomeView extends React.Component {
 
     render(){
         const { plants, showCreateForm } = this.state
+        
+        const filteredPlant = this.state.plants.filter(plant=> plant.Common_Name.toLowerCase().includes(this.state.search.toLowerCase()))     
+        
         // TODO: In order to search, what state, methods and element attributes are needed? 
         // In order to render the correct plants, what calculations do you need to do and what props do you need to change below?
-
+       
         return (
             <div>
                 <button onClick={this.toggleCreateForm}>{showCreateForm ? "Hide Form" : "Submit Plant"}</button>
-                { showCreateForm && <CreatePlantForm />}
+                { showCreateForm && <CreatePlantForm addNewPlant={this.addNewPlant}/>}
                 <hr />
                 <div>
-                    <input placeholder="Search for Plants"/>
+                    <input placeholder="Search for Plants" value={this.state.search} onChange={this.changeHandler}/>
                 </div>
-                <MatchContainer plants={plants}/>
+                <MatchContainer plants={filteredPlant} />
             </div>
         )
     }
