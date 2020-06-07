@@ -8,7 +8,7 @@ const SongList = props => {
     return (
         <div className="half songlist">
             <h2>Song List</h2>
-            <Filter />
+            <Filter changeGenre={props.changeGenre} favs={props.favs}/>
             <table>
                     <thead>
                         <tr>
@@ -21,7 +21,7 @@ const SongList = props => {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* { songs.map(whatever => <SongItem {songs...}/>) } */}
+                        { props.songs.map(song => <SongItem key={song.id} {...song} handleFavorite={props.handleFavorite}/>)}
                     </tbody>
             </table>
         </div>

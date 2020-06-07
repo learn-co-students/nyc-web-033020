@@ -4,14 +4,15 @@ const Filter = props => {
     return (
         <div className="simple-flex-row">
             <label> Genre: 
-                <select>
-                    <option>Hip Hop</option>
-                    <option>Pop</option>
-                    <option>R&B</option>
+                <select onChange={props.changeGenre}>
+                    <option value=''>All</option>
+                    <option value='Hip Hop'>Hip Hop</option>
+                    <option value='Pop'>Pop</option>
+                    <option value='Salsa'>Salsa</option>
                 </select>
             </label>
             <label> Favorites? 
-                <select>
+                <select onChange={props.favs}>
                     <option>All</option>
                     <option>Just Favs</option>
                 </select>
