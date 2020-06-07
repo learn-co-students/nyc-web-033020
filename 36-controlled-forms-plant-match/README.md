@@ -90,7 +90,9 @@ After pulling down your cohort repo and navigating to the correct folder:
 ## Deliverables 
 ### Core Deliverables
 While taking on each of the core deliverables, remember the essential elements of creating a controlled form. While you can make a form work in React without it being controlled, this is the right way to do it and something we're checking for. 
-- When the user clicks on `Login` they're shown the `Login` component and the form it contains. Make `Login` a fully controlled form. When it submits, it should redirect the user to the plants view. There's some code to help you with the redirect.
+- When the user clicks on `Login` they're shown the `Login` component and the form it contains. 
+- - Make `Login` a fully controlled form. When it submits, it should redirect the user to the plants view. There's some code to help you with the redirect.
+
 - On the plants view, when a user types into the search bar, the plants should be filtered. Consider where state should live for this controlled form and how to complete that filter. 
 
 ### Advanced Deliverables

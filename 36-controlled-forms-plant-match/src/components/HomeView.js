@@ -7,6 +7,7 @@ const API_BASE = 'http://localhost:3001/plants'
 class HomeView extends React.Component {
     state = {
         plants: [],
+        showPlants: [],
         showCreateForm: false,
     }
 
@@ -14,9 +15,15 @@ class HomeView extends React.Component {
      * It's part of content we'll learn on FRIDAY of WEEK ONE
     */
     componentDidMount(){
-        fetch(API_BASE)
-            .then(res => res.json())
-            .then(plants => this.setState({ plants }))
+      fetch(API_BASE)
+        .then(res => res.json())
+        .then(plants => {
+          this.setState({ plants })
+          this.setState({ 
+            showPlants: plants 
+          })
+        })
+      
     }
 
     toggleCreateForm = () => this.setState({ showCreateForm: !this.state.showCreateForm })
@@ -28,10 +35,39 @@ class HomeView extends React.Component {
      * Define a method that can add a new plant into the plants array.
      */
 
+    handleChange = (e) => {
+      
+      const value = e.target.value
+      const plants = this.state.plants
+      const filteredPlants = plants.filter(plant => {
+        return plant.Common_Name.toLowerCase().includes(value)
+      })
+      if(filteredPlants.length > 0){
+        this.setState({
+          showPlants: filteredPlants
+        });
+      } 
+
+      // if (filteredPlants){
+      //   this.setState({
+      //     plants: filteredPlants
+      //   });
+      // } else {
+      //   this.setState({
+      //     plants: plants
+      //   });
+      // }
+      
+    };
+
     render(){
-        const { plants, showCreateForm } = this.state
+        const { showPlants, showCreateForm } = this.state
+        // console.log(plants)
         // TODO: In order to search, what state, methods and element attributes are needed? 
         // In order to render the correct plants, what calculations do you need to do and what props do you need to change below?
+
+       
+
 
         return (
             <div>
@@ -39,9 +75,9 @@ class HomeView extends React.Component {
                 { showCreateForm && <CreatePlantForm />}
                 <hr />
                 <div>
-                    <input placeholder="Search for Plants"/>
+                    <input onChange={this.handleChange} name="plantsearch" placeholder="Search for Plants"/>
                 </div>
-                <MatchContainer plants={plants}/>
+                <MatchContainer plants={showPlants}/>
             </div>
         )
     }
