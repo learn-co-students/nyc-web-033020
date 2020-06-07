@@ -15,16 +15,20 @@ export default class GuidanceContainer extends React.Component {
                             <td>Image</td>
                             <td>Description</td>
                             <td>Stars</td>
+                            <td>Priority?</td>
                         </tr>
                     </thead>
                     <tbody>
+                        {wellnessFactors
+                            .sort((a,b) => b.stars - a.stars)
+                            .map(factor => 
+                            <GuidanceItem 
+                                key={factor.id} 
+                                {...factor}
+                            />
+                        )}
+                     
 
-                        { wellnessFactors.sort((a,b) => b.stars - a.stars).map(factor => 
-                        <GuidanceItem 
-                            key={factor.id}
-                            {...factor} />
-                        )}       
-                           
                     </tbody>
                 </table>
             </div>
@@ -39,4 +43,4 @@ export default class GuidanceContainer extends React.Component {
             </div>
         )
     }
-}
+} 

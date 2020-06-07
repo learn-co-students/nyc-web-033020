@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Wheel from './Wheel.js'
-import GuidanceContainer from './GuidanceContainer.js'
+import Wheel from './Wheel'
+import GuidanceContainer from './GuidanceContainer';
 
 function App() {
   return (

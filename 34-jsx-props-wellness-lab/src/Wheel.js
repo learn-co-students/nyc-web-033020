@@ -5,18 +5,17 @@ import { Pie } from './styles';
 
 
 export default class Wheel extends React.Component {
+
+    renderWellnessItems = (factors) => {
+        return factors.map(factor => <WellnessItem key={factor.id} {...factor}/>)
+    }
+
     render(){
         return (
             <Pie size={300}>
-                {wellnessFactors.map(factor => {
-						return <WellnessItem key={factor.id} {...factor} />
-                    })
-                }
-                {/** TODO: map over your wellness factors and create a WellnessItem for each. 
-                 *         check the WellnessItem component to see what it's expecting for props
-                 *         Hint: Use your ES6 techniques
-                 */}
+                {this.renderWellnessItems(wellnessFactors)}
+               
             </Pie>
         )
     }
-}
+} 
