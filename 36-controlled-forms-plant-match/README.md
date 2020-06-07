@@ -89,15 +89,20 @@ After pulling down your cohort repo and navigating to the correct folder:
 
 ## Deliverables 
 ### Core Deliverables
-While taking on each of the core deliverables, remember the essential elements of creating a controlled form. While you can make a form work in React without it being controlled, this is the right way to do it and something we're checking for. 
-- When the user clicks on `Login` they're shown the `Login` component and the form it contains. 
-- - Make `Login` a fully controlled form. When it submits, it should redirect the user to the plants view. There's some code to help you with the redirect.
+While taking on each of the core deliverables, remember the essential elements of creating a controlled form. While you can make a form work in React without it being controlled, this is the right way to do it and something we're checking for.
 
-- On the plants view, when a user types into the search bar, the plants should be filtered. Consider where state should live for this controlled form and how to complete that filter. 
+- √ When the user clicks on `Login` they're shown the `Login` component and the form it contains. 
+- √ Make `Login` a fully controlled form. When it submits, it should redirect the user to the plants view. There's some code to help you with the redirect.
+
+- √ On the plants view, when a user types into the search bar, the plants should be filtered. Consider where state should live for this controlled form and how to complete that filter. 
 
 ### Advanced Deliverables
 If you get through all of the Core Deliverables, try your hand at the Advanced ones. 
 - Make the `CreatePlantForm` a fully controlled form that accepts a `Common_Name`, `Scientific_Name`, and `img_name`. When submitted, it needs to persist the new plant to the backend and update the frontend pessimistically *without refreshing the page*. Make sure you post the data to the backend correctly formatted keys. 
+
+- - make fetch POST request to plants api
+- - add plant to plant object array in App component
+
 - Add behavior so when a user logs in, it replaces the username in `App` state to the submitted username and updates the greeting.
 
 

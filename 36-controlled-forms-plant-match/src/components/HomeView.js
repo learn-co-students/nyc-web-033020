@@ -22,10 +22,10 @@ class HomeView extends React.Component {
           this.setState({ 
             showPlants: plants 
           })
-        })
-      
+        }) 
     }
 
+    // don't use this.state() inside setState???
     toggleCreateForm = () => this.setState({ showCreateForm: !this.state.showCreateForm })
 
 
@@ -47,32 +47,25 @@ class HomeView extends React.Component {
           showPlants: filteredPlants
         });
       } 
+    };
 
-      // if (filteredPlants){
-      //   this.setState({
-      //     plants: filteredPlants
-      //   });
-      // } else {
-      //   this.setState({
-      //     plants: plants
-      //   });
-      // }
-      
+    updatePlants = (plant) => {
+      const newPlantsArray = this.state.plants.push(plant)
+      this.setState({
+        plants: newPlantsArray
+      })
     };
 
     render(){
         const { showPlants, showCreateForm } = this.state
-        // console.log(plants)
         // TODO: In order to search, what state, methods and element attributes are needed? 
         // In order to render the correct plants, what calculations do you need to do and what props do you need to change below?
-
-       
 
 
         return (
             <div>
                 <button onClick={this.toggleCreateForm}>{showCreateForm ? "Hide Form" : "Submit Plant"}</button>
-                { showCreateForm && <CreatePlantForm />}
+                { showCreateForm && <CreatePlantForm updatePlants={this.updatePlants}/>}
                 <hr />
                 <div>
                     <input onChange={this.handleChange} name="plantsearch" placeholder="Search for Plants"/>

@@ -19,6 +19,7 @@ class App extends React.Component {
 
 
   render() {
+    
     return (
       <div className="App">
        <Navbar changeView={this.changeView} view={this.state.view} username={this.state.username} />
