@@ -17,9 +17,9 @@ React Best Practices
   - [ ] Fragments
 
 - Best Practices:
-  - [ ] Functional setState
-  - [ ] "then" callback for setState
   - [ ] Callbacks (avoid useless wrapping)
+  - [ ] "then" callback for setState
+  - [ ] Functional setState
 
 - JS tricks/bugs often seen in React:
   - [ ] Arrow functions returning objects () => ({ })
@@ -53,4 +53,10 @@ React Best Practices
    - Plan where state should be held, methods you'll need, and what to pass as props 
 
 
+
+Features
+- On app load, show all books (just the covers)
+- As user types into the search bar, filter books based on title and/or author
+
 ## Second Breakout Session
+- Click on an individual book and flip it to show the detail
