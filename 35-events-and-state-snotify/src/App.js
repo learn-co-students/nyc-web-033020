@@ -6,8 +6,9 @@ let API_ENDPOINT = `http://localhost:6001/songs`
 
 class App extends React.Component {
   state = {
-    songs: [ ],
-    genre: ''
+    songs: [],
+    genre: '',
+    queue: null,
   }
   
 
@@ -22,7 +23,7 @@ class App extends React.Component {
     }
 
     favs = event => {
-      if (event.target.value == 'Just Favs'){
+      if (event.target.value === 'Just Favs'){
          this.setState({ songs: this.state.songs.filter(song => song.favorite)})
       } else {
         this.fetchSongs()
@@ -51,12 +52,23 @@ class App extends React.Component {
     )
   }
 
+  playInQueue = id => {
+    const playSong = this.state.songs.find(song => song.id === id)
+    this.setState({ queue: playSong})
+  }
+
   render(){
     let songsList = this.state.songs.filter(song => song.genre.includes(this.state.genre))
     return (
       <div className="App">
         {this.renderNav()} {/** The renderNav method renders a div holding the button to get songs and the title */}
-        <MainContainer songs={songsList} changeGenre={this.changeGenre} favs={this.favs} handleFavorite={this.handleFavorite}/> {/** TODO: What props do I need? */}
+        <MainContainer 
+        songForQ={this.state.queue}
+        playInQueue={this.playInQueue}
+         songs={songsList}
+         changeGenre={this.changeGenre}
+         favs={this.favs} 
+         handleFavorite={this.handleFavorite}/> 
       </div>
     );
   }

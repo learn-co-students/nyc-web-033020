@@ -21,7 +21,7 @@ const SongList = props => {
                         </tr>
                     </thead>
                     <tbody>
-                        { props.songs.map(song => <SongItem key={song.id} {...song} handleFavorite={props.handleFavorite}/>)}
+                        { props.songs.map(song => <SongItem key={song.id} {...song} handleFavorite={props.handleFavorite} playInQueue={props.playInQueue}/>)}
                     </tbody>
             </table>
         </div>
