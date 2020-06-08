@@ -1,0 +1,74 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "title": "How to be an Anti-Racist",
+            "author": "Ibram X. Kendi",
+            "cover_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1560163756l/40265832.jpg",
+            "blurb": "Ibram X. Kendi's concept of antiracism reenergizes and reshapes the conversation about racial justice in America--but even more fundamentally, points us toward liberating new ways of thinking about ourselves and each other. In How to be an Antiracist, Kendi asks us to think about what an antiracist society might look like, and how we can play an active role in building it..."
+        },
+        {
+            "id": 2,
+            "title": "The New Jim Crow",
+            "author": "Michelle Alexander",
+            "cover_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328751532l/6792458.jpg",
+            "blurb": "Jarvious Cotton's great-great-grandfather could not vote as a slave. His great-grandfather was beaten to death by the Klu Klux Klan for attempting to vote. His grandfather was prevented from voting by Klan intimidation; his father was barred by poll taxes and literacy tests. Today, Cotton cannot vote because he, like many black men in the United States, has been labeled a..."
+        },
+        {
+            "id": 3,
+            "title": "Between the World and Me",
+            "author": "Ta-Nehisi Coates",
+            "cover_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1451435027l/25489625._SY475_.jpg",
+            "blurb": "In a profound work that pivots from the biggest questions about American history and ideals to the most intimate concerns of a father for his son, Ta-Nehisi Coates offers a powerful new framework for understanding our nation’s history and current crisis."
+        },
+        {
+            "id": 4,
+            "title": "Are Prisons Obsolete?",
+            "author": "Angela Y Davis",
+            "cover_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320521835l/108428.jpg",
+            "blurb": "With her characteristic brilliance, grace and radical audacity, Angela Y. Davis has put the case for the latest abolition movement in American life: the abolition of the prison. As she quite correctly notes, American life is replete with abolition movements, and when they were engaged in these struggles, their chances of success seemed almost unthinkable. For generations..."
+        },
+        {
+            "id": 5,
+            "title": "The People’s History of the United States",
+            "author": "Howard Zinn",
+            "cover_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1494279423l/2767._SY475_.jpg",
+            "blurb": "Library Journal calls Howard Zinn’s iconic A People's History of the United States “a brilliant and moving history of the American people from the point of view of those…whose plight has been largely omitted from most histories.” Packed with vivid details and telling quotations, Zinn’s award-winning classic continues to revolutionize the way American history is taught and..."
+        },
+        {
+            "id": 6,
+            "title": "Women, Race, and Class",
+            "author": "Angela Y Davis",
+            "cover_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1359985746l/635635.jpg",
+            "blurb": "A powerful study of the women's movement in the U.S. from abolitionist days to the present that demonstrates how it has always been hampered by the racist and classist biases of its leaders."
+        },
+        {
+            "id": 7,
+            "title": "When They Call You a Terrorist: A Black Lives Matter Memoir",
+            "author": "Patrisse Khan-Cullors, Asha Bandele, Angela Y. Davis",
+            "cover_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1499148072l/34964998.jpg",
+            "blurb": "A poetic and powerful memoir about what it means to be a Black woman in America—and the co-founding of a movement that demands justice for all in the land of the free."
+        },
+        {
+            "id": 8,
+            "title": "White Fragility",
+            "author": "Robin DiAngelo",
+            "cover_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1548478235l/43708708.jpg",
+            "blurb": "The New York Times best-selling book exploring the counterproductive reactions white people have when their assumptions about race are challenged, and how these reactions maintain racial inequality."
+        },
+        {
+            "id": 9,
+            "title": "A Plague of Prisons",
+            "author": "Ernest M. Drucker",
+            "cover_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328751706l/8674825.jpg",
+            "blurb": "When Dr. John Snow first traced an outbreak of cholera to a water pump in the Soho district of London in 1854, the field of epidemiology was born. Taking the same public health approaches and tools that have successfully tracked epidemics of flu, tuberculosis, and AIDS over the intervening one hundred and fifty years, Ernest Drucker makes the case that our current unpreced..."
+        },
+        {
+            "id": 10,
+            "title": "When Affirmative Action was White",
+            "author": "Ira Katznelson",
+            "cover_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348870472l/88367.jpg",
+            "blurb": "In this 'penetrating new analysis' (New York Times Book Review) Ira Katznelson fundamentally recasts our understanding of twentieth-century American history and demonstrates that all the key programs passed during the New Deal and Fair Deal era of the 1930s and 1940s were created in a deeply discriminatory manner. Through mechanisms designed by Southern Democrats that..."
+        }
+    ]
+}
