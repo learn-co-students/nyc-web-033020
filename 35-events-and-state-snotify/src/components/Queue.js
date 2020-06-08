@@ -3,6 +3,8 @@ import React from 'react';
 const Queue = props => {
     console.log(props)
     let currentSong = props.songForQ
+    let nextSongInQue = props.nextSong
+    console.log(nextSongInQue)
     return (
         <div className="half queue">
             <h2>Queue</h2>
@@ -15,7 +17,7 @@ const Queue = props => {
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" >
             </iframe>}
             <ol>
-             <li></li>
+             {/* <li>{nextSongInQue.title}</li> */}
             </ol>
         </div>
     )

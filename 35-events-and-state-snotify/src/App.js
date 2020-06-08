@@ -9,6 +9,7 @@ class App extends React.Component {
     songs: [],
     genre: '',
     queue: null,
+    nextInQ: null 
   }
   
 
@@ -57,12 +58,20 @@ class App extends React.Component {
     this.setState({ queue: playSong})
   }
 
+  nextSong = id => {
+    const playNextSong = this.state.songs.find(song => song.id === id)
+    this.setState({ nextInQ: playNextSong})
+  }
+
+  
   render(){
     let songsList = this.state.songs.filter(song => song.genre.includes(this.state.genre))
     return (
       <div className="App">
         {this.renderNav()} {/** The renderNav method renders a div holding the button to get songs and the title */}
         <MainContainer 
+        next = {this.nextInQ}
+        nextSong={this.playInQueue}
         songForQ={this.state.queue}
         playInQueue={this.playInQueue}
          songs={songsList}
