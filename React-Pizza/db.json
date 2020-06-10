@@ -1,0 +1,82 @@
+{
+  "pizzas": [
+    {
+      "id": 1,
+      "topping": "Plain",
+      "size": "Small",
+      "vegetarian": true
+    },
+    {
+      "id": 2,
+      "topping": "Pepperoni",
+      "size": "Small",
+      "vegetarian": false
+    },
+    {
+      "id": 3,
+      "topping": "Mushrooms",
+      "size": "Large",
+      "vegetarian": true
+    },
+    {
+      "id": 4,
+      "topping": "Sausage and Peppers 2",
+      "size": "Small",
+      "vegetarian": false
+    },
+    {
+      "id": 5,
+      "topping": "Bacon",
+      "size": "Medium",
+      "vegetarian": false
+    },
+    {
+      "id": 6,
+      "topping": "Spinach",
+      "size": "Medium",
+      "vegetarian": true
+    },
+    {
+      "id": 7,
+      "topping": "Green Olives",
+      "size": "Small",
+      "vegetarian": true
+    },
+    {
+      "id": 8,
+      "topping": "Pineapple & Ham",
+      "size": "Large",
+      "vegetarian": false
+    },
+    {
+      "id": 9,
+      "topping": "Prosciutto and Arugula ",
+      "size": "Small",
+      "vegetarian": false
+    },
+    {
+      "id": 10,
+      "topping": "Chicken and Onions",
+      "size": "Small",
+      "vegetarian": false
+    },
+    {
+      "size": "Small",
+      "topping": "Buratta ",
+      "vegetarian": true,
+      "id": 11
+    },
+    {
+      "topping": "green eggs and ham",
+      "vegetarian": false,
+      "size": "Medium",
+      "id": 12
+    },
+    {
+      "size": "Large",
+      "topping": "Hawaiian",
+      "vegetarian": false,
+      "id": 13
+    }
+  ]
+}
