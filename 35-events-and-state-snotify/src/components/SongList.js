@@ -7,7 +7,6 @@ class SongList extends React.Component{
         favorite : 'all',
         genre : 'all'
     }
-
     handleFavoritesChange = e => {
         this.setState({ favorite: e.target.value })
     }
@@ -17,25 +16,27 @@ class SongList extends React.Component{
     
 
     render(){
-
+    const {songs, updateFav, renderUrl,listSongs,queues} = this.props
+    const {genre,favorite} = this.state
+    let songsToRender = songs
        
-        let songsToRender = this.props.songs
-        if(this.state.favorite === "favorite"){
-            songsToRender = this.props.songs.filter(song=>song.favorite)
-        }else if(this.state.genre === "Pop"){
-            songsToRender = this.props.songs.filter(song=>song.genre==="Pop")
-        }else if(this.state.genre === "Hip Hop"){
-            songsToRender = this.props.songs.filter(song=>song.genre==="Hip Hop")
-        }else if(this.state.genre === "R&B"){
-            songsToRender = this.props.songs.filter(song=>song.genre==="R&B")
+
+        if(favorite === "favorite"){
+            songsToRender = songs.filter(song=>song.favorite)
+        }else if(genre === "Pop"){
+            songsToRender = songs.filter(song=>song.genre==="Pop")
+        }else if(genre === "Hip Hop"){
+            songsToRender = songs.filter(song=>song.genre==="Hip Hop")
+        }else if(genre === "R&B"){
+            songsToRender = songs.filter(song=>song.genre==="R&B")
         }
         return (
             <div className="half songlist">
                 <h2>Song List</h2>
 
                 <Filter 
-                genre={this.state.genre}
-                favorite={this.state.favorite} 
+                genre={genre}
+                favorite={favorite} 
                 handleFavoritesChange={this.handleFavoritesChange}
                 handleGenreChange={this.handleGenreChange}
                 />
@@ -55,8 +56,10 @@ class SongList extends React.Component{
                             {songsToRender.map(song => <SongItem
                             key={song.id}
                             {...song}
-                            updateFav={this.props.updateFav}
-                            renderUrl={this.props.renderUrl}
+                            updateFav={updateFav}
+                            renderUrl={renderUrl}
+                            listSongs={listSongs}
+                            queues ={queues}
                             />)}
                         
                         </tbody>

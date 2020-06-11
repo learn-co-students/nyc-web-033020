@@ -1,24 +1,28 @@
 import React from 'react';
 
 const Queue = props => {
+    const{currentSong,deleteSong,queues} = props
     return (
         <div className="half queue">
             <h2>Queue</h2>
-            {props.currentSong && <iframe 
-                title={props.currentSong.title}
+            {currentSong && <iframe 
+                
+                 title={currentSong.title}
                 width="361" 
                 height="215" 
-                src={`${props.currentSong.url}?autoplay=1&mute=1`}
+                src={`${currentSong.url}?autoplay=1&mute=1`}
                 frameBorder="0" 
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" >
             </iframe>}
-            <ol>
-                <li>Empty Sample LI</li>
+            {queues&&<ol>
+               
                 {/**
                  * TODO: Render all the songs in your queue here!
                  * 
                  */}
-            </ol>
+                 {queues.map(song=> <li key={song.id}>{song.title} <button onClick={()=>deleteSong(song.id)}>x</button></li> )}
+
+            </ol>}
         </div>
     )
 }
