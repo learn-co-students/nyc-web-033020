@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Nav = props => {
     /**
@@ -9,12 +9,12 @@ const Nav = props => {
      */
     return (
         <div className="simple-flex-row">
-            <div>🐰🐱🐶🐹☕️🍵</div>
-            <div>Home</div>
-            <div>Pets</div>
+            <Link to="/"> <div>🐰🐱🐶🐹☕️🍵</div> </Link>
+            <Link to="/"><div>Home</div></Link>
+            <Link to="/pets"><div>Pets</div></Link>
             <div className="simple-flex-row right-corner">
-                <div>Login</div>
-                <div>?</div>
+                <Link to="/login"><div>Login</div></Link>
+                <Link to="/help"><div>?</div></Link>
             </div>
         </div>
     )

@@ -18,7 +18,7 @@ class Auth extends React.Component {
         const { isNewUser, password, confirmation, username } = this.state;
         isNewUser 
             ? password === confirmation ? alert('created new account!') : alert('try again!')
-            : alert(`welcome back, ${username}`)
+            : this.props.history.push("/pets")
             /** TODO: when the user logs in, move them to our /pets page  */
     }
 
@@ -45,13 +45,14 @@ class Auth extends React.Component {
     }
     
     render(){
+        console.log('in auth', this.props)
         let { isNewUser } = this.state;
         return (
             <div className="simple-flex-col">
                 <h3>{isNewUser ? 'Sign Up' : 'Login'}</h3>
                 { isNewUser ? this.renderSignup() : this.renderLogin() }
                 <button type="submit" onClick={this.handleSubmit}>Submit</button>
-                <div onClick={this.toggleNewUser}>{isNewUser ? "Login Instead" : "Sign Up Instead"}</div>
+                <div onClick={event => this.toggleNewUser(event)}>{isNewUser ? "Login Instead" : "Sign Up Instead"}</div>
             </div>
         )
     }

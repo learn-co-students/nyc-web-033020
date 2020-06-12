@@ -9,8 +9,9 @@ class PetProfile extends React.Component {
     }
 
     componentDidMount() {
+        console.log('profile props', this.props)
         /** TODO: Make this dynamic! Use the id param of the URL to fetch the correct cat!  */
-        fetch(`${API}/3`)
+        fetch(`${API}/${this.props.match.params.id}`)
             .then(res => res.json())
             .then(pet => this.setState({ pet }))
     }
@@ -30,7 +31,7 @@ class PetProfile extends React.Component {
                     <div>
                         <div>⬅️</div>
                         <div>➡️</div>
-                        <button>Return to the Cafe Floor</button>
+                        <button onClick={this.props.history.goBack}>Go Back</button>
                     </div>
                 </div>
                 

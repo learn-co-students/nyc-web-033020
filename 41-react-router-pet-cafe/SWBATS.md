@@ -11,35 +11,29 @@ React Router
 - [ ] Make the distinction between `state` being one _Single Source of Truth_ and `react-router` being another _Single Source of Truth_
 
 
-
-## Movie Review Fullstack 
-### Setup 
-- Run frontend: `npm start` 
-- Run backend: `rails s -p 3001`
-
-### Features
-- [MovieApp Wireframe and Component Hierarchy](https://awwapp.com/b/ui0yjws5o/)
-- [ ] Route for login
-- [ ] Route for signup
-- [ ] Route for home page
-- [ ] Enable navbar to move between home/login/signup
-- [ ] Clicking on a movie movies us to `/movies/:id`
-- [ ] Use dynamic route to fetch a display single movie view
-
 ## Lecture Notes
 - [Example with All of Ze Routes](https://github.com/sbal13/Project_Athena_client/blob/master/src/App.js)
 
 ## SPAs
 
 ### Benefits
-
+- supa dupa fast... you only have to fetch your HTML once
 
 
 ### Challenges 
-
+- if the initial fetch is slow... your users gonna be maaaad and/or not your user anymore
+- everything lives on a single app so you've gotta plan to have everything on that first view 
+- no way to navigate to specific pages
+- no way share 
+- no way bookmark
 
 
 ## Dynamic Routing from Rails
+/users/:id
+
+Netflix example
+/movies/:id ===> /movies/8
+/movies/:genre ===> /movies/horror
 
 
 
@@ -99,6 +93,7 @@ Combine that with `if/else` logic and tracking history and you get `react-router
 - [HTML5 History API MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/History_API)
 - [React Router Github](https://github.com/ReactTraining/react-router)
 - [React Router Website](https://reacttraining.com/react-router/)
+- [Anchors in React Router](https://medium.com/javascript-in-plain-english/creating-a-hash-anchor-link-effect-with-react-router-a63dcb1a9b0e)
 
 
 
