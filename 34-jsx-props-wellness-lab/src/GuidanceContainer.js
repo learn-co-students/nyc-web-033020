@@ -1,6 +1,6 @@
-import React from 'react';
-import { wellnessFactors } from './data';
-import GuidanceItem from './GuidanceItem';
+import React from 'react'
+import { wellnessFactors } from './data'
+import GuidanceItem from './GuidanceItem'
 
 export default class GuidanceContainer extends React.Component {
 
@@ -19,25 +19,33 @@ export default class GuidanceContainer extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        { wellnessFactors.sort((a,b) => b.stars - a.stars ).map(factor => 
+                        {/* TODO: Render GuidanceItems. Check GuidanceItem component for the props. Note: there's a bug in GuidanceItem that will make it fail - find it. */}
+
+                        {/* Spread operator: lets you expand an iterable into its elements; can be used to pass props (key-value pairs) to a component. Here, you're passing down every single key inside of factor obj (from data.js) as a prop down to GuidanceItem */}
+                        {wellnessFactors.sort((a,b) => b.stars - a.stars).map(factor => 
                             <GuidanceItem 
                                 key={factor.id} 
                                 {...factor} />
-                            )
-                        /** TODO:  Render GuidanceItems here
-                                    Check the GuidanceItem component for the expect props
-                                    BUG CATCHER: There's a bug in GuidanceItem that will make it fail. 
-                                            Can you find it? 
-                                            What warning did you get and how did it help you?
-                        */}
-                           
+                        )}
+
+                        {/* Longer way:
+                            {wellnessFactors.sort((a,b) => b.stars - a.stars).map(factor => 
+                            <GuidanceItem 
+                                key={factor.id}
+                                id={factor.id}
+                                title={factor.title}
+                                image={factor.image}
+                                description={factor.description}
+                                stars={factor.stars}
+                            />)
+                        } */}
                     </tbody>
                 </table>
             </div>
         )   
     }
 
-    render(){
+    render() {
         return (
             <div>
                 <h2> Learn More! </h2>

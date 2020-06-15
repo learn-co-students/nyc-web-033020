@@ -1,8 +1,7 @@
-import React, { Component, Fragment} from 'react';
-import './App.css';
-// import { Wheel, getFetch } from './Wheel'; // this is named import syntax 
+import React, {Component, Fragment} from 'react'
+import './App.css'
 import Wheel from './Wheel'
-import GuidanceContainer from './GuidanceContainer';
+import GuidanceContainer from './GuidanceContainer'
 
 function App() {
 
@@ -17,10 +16,10 @@ function App() {
   }
   return (
     <div className="App">
-      <h1> Welcome to the Wellness Center</h1>
+      <h1>Welcome to the Wellness Center</h1>
       { renderComponentsWithLine() }
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

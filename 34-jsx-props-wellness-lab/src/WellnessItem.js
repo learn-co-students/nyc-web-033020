@@ -1,19 +1,15 @@
-import React from 'react';
-import { HoldCSSDeck, PieCSSDeck } from './styles';
-
+import React from 'react'
+import { HoldCSSDeck, PieCSSDeck } from './styles'
 
 export default class WellnessItem extends React.Component {
 
-    // when we click on the slice
-    // alert with the name 
-
+    //When you click on the slice, alert with the name:
     handleClick = (event) => {
         console.log(event)
         alert(`You clicked on ${this.props.title}!`)
     }
 
-
-    render(){
+    render() {
         const { id, color, title, isPriority } = this.props
         // console.log(this.props)
 
@@ -27,12 +23,7 @@ export default class WellnessItem extends React.Component {
     }
 }
 
-/**
- *  TODO: Add default props to the WellnessItem for color 
- *          the default color should be some kind of grey so it stands out
- *          TEST: do not pass down a prop for the color and see the whole circle go grey! 
- */
-
+/* TODO: Add defaultProps to the WellnessItem for color. The default color should be some grey. Test: do not pass down a prop for the color and see the whole circle go grey! */
 WellnessItem.defaultProps = {
     color: 'grey'
-};
+}

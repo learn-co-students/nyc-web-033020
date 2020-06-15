@@ -1,21 +1,19 @@
-import React from 'react';
-import { wellnessFactors } from './data'; // aliases
-import WellnessItem from './WellnessItem';
-import { Pie } from './styles';
-
+import React from 'react'
+import { wellnessFactors } from './data' //named import
+import WellnessItem from './WellnessItem' //default import
+import { Pie } from './styles'
 
 export default class Wheel extends React.Component {
-    render(){
+    render() {
         return (
             <Pie size={300}>
-                { wellnessFactors.map(factor => <WellnessItem key={factor.id} {...factor}  />)
-                /** TODO: map over your wellness factors and create a WellnessItem for each. 
-                 *         check the WellnessItem component to see what it's expecting for props
-                 *         Hint: Use your ES6 techniques
-                 */}
+                {/* TODO: map over your wellnessFactors and create a WellnessItem for each. Check the WellnessItem component to see what props it's expecting */}
+
+                {wellnessFactors.map(factor => <WellnessItem key={factor.id} {...factor} />)}
+                
+                {/* Longer way:
+                {wellnessFactors.map(factor => <WellnessItem key={factor.id} id={factor.id} color={factor.color} title={factor.title} isPriority={factor.isPriority} />)} */}
             </Pie>
         )
     }
 }
-
-// export const getFetch = () => fetch('localhost:3000/songs').then(res => res.json())

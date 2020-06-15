@@ -1,11 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 
 const GuidanceItem = (props) => {
-    const { title, image, description, stars, isPriority } = props;
-    // console.log('in an item', props)
-
-
+    const { title, image, description, stars, isPriority } = props //destructuring
+ 
     return (
         <tr>
             <td>{title}</td>
@@ -17,4 +15,4 @@ const GuidanceItem = (props) => {
     )
 }
 
-export default GuidanceItem;
+export default GuidanceItem
