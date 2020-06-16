@@ -7,7 +7,8 @@ const API_BASE = 'http://localhost:3001/plants'
 class HomeView extends React.Component {
     state = {
         plants: [],
-        showCreateForm: false,
+        searchTerm: "",
+        showCreateForm: false
     }
 
     /** DO NOT WORRY ABOUT THIS COMPONENTDIDMOUNT METHOD
@@ -21,6 +22,9 @@ class HomeView extends React.Component {
 
     toggleCreateForm = () => this.setState({ showCreateForm: !this.state.showCreateForm })
 
+    handleChange = event => {
+        this.setState({searchTerm: event.target.value})
+    }
 
     /**
      * TODO: ONLY FOR ADVANCED DELIVERABLES
@@ -28,7 +32,8 @@ class HomeView extends React.Component {
      * Define a method that can add a new plant into the plants array.
      */
 
-    render(){
+    render() {
+        console.log(this.state)
         const { plants, showCreateForm } = this.state
         // TODO: In order to search, what state, methods and element attributes are needed? 
         // In order to render the correct plants, what calculations do you need to do and what props do you need to change below?
@@ -39,7 +44,7 @@ class HomeView extends React.Component {
                 { showCreateForm && <CreatePlantForm />}
                 <hr />
                 <div>
-                    <input placeholder="Search for Plants"/>
+                    <input value={this.state.searchTerm} onChange={this.handleChange} placeholder="Search for Plants"/>
                 </div>
                 <MatchContainer plants={plants}/>
             </div>
